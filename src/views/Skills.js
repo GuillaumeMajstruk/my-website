@@ -9,7 +9,7 @@ const Skills = () => {
                 <div className="column h-100 center-v">
                     <h2 className="font-rhyme text-light">WHAT ARE MY <strong>SKILLS? #</strong></h2>
                     <h3 className="font-space text-normal mt-xs">Any question(s)? Fill free to <button className="button text-bold">contact me</button></h3>
-                    <div className="grid-wrapper space-between mt-lg w-100" style={{fontSize: "1.8rem"}}>
+                    <div id="skill-grid" className="grid-wrapper space-between mt-lg w-100" style={{fontSize: "1.8rem"}}>
                         <div className="w-100">
                             <div className="row space-between mb-xs">
                                 <h3 className="text-bold">Technicals</h3>
