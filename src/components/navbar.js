@@ -67,7 +67,9 @@ const Nav = () => {
                 </div>
                 <div className="navbar-mobile--buttons-row">
                     <div id="theme-slider-mobile" className="slider active" onClick={() => switchTheme()}></div>
-                    <div id="show-menu" onClick={() => openCloseMenu()}></div>
+                    <div id="show-menu-container" onClick={() => openCloseMenu()}>
+                        <div id="show-menu"></div>
+                    </div>
                 </div>
             </div>
         </Router>

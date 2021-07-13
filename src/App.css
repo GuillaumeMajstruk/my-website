@@ -11,7 +11,7 @@
   --text-ok: #1B998B;
   --link-color: #02A9EA;
   --background-color: #FAFAFA;
-  --background-header-color: #F4F5F5;
+  --background-header-color: #EFEFEF;
   --slider-background: #DFDFDF;
   --slider-btn-background: #F4F5F5;
   --slider-btn-color: #0E0E0E;
@@ -42,7 +42,7 @@
   --text-ok: #1B998B;
   --link-color: #02A9EA;
   --background-color: #0E0E0E;
-  --background-header-color: #171515;
+  --background-header-color: #211E1E;
   --slider-background: #282828;
   --slider-btn-background: #171515;
   --slider-btn-color: #FFFEFF;
@@ -73,7 +73,7 @@ html {
 body {
   font-size: var(--body-font-size);
   font-family: var(--text-font), sans-serif;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 /* margins, height, width ... utilities */
@@ -232,9 +232,15 @@ a:visited {
   color: var(--text-color);
 }
 
-#show-menu {
-  /* transition: all .2s ease-in; */
+#show-menu-container {
   cursor: pointer;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#show-menu {
   display: block;
   position: relative;
   width: 20px;
@@ -300,6 +306,18 @@ a:visited {
     padding: 4rem !important;
   }
   
+  .background-header {
+    font-family: var(--title-font);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    text-transform: uppercase;
+    font-size: 13.15rem;
+    color: var(--background-header-color);
+    z-index: -1;
+  }
+
   #skill-grid {
     grid-template-columns: repeat(1, 1fr) !important;
     gap: 3rem !important;
@@ -338,15 +356,6 @@ a:visited {
     align-items: center;
     margin: auto 0;
     width: 100%;
-  }
-
-  @keyframes test {
-    from {
-      height: 0
-    }
-    to {
-      height: 240px
-    }
   }
 
   .navbar-mobile--actions {
@@ -388,6 +397,10 @@ a:visited {
     height: auto;
     width: 100vw;
   }
+
+  .background-header {
+    font-size: 18rem;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -406,6 +419,10 @@ a:visited {
     height: calc(100vh - var(--navbar-height));
     width: 100vw;
     padding: 0 !important;
+  }
+
+  .background-header {
+    font-size: 26.3rem;
   }
 
   #skill-grid {
@@ -522,18 +539,6 @@ a:visited {
   background-color: var(--accent-color);
 }
 /* END OF buttons settings */
-
-.background-header {
-  font-family: var(--title-font);
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%);
-  text-transform: uppercase;
-  font-size: 26.3rem;
-  color: var(--background-header-color);
-  z-index: -1;
-}
 
 /* home component css */
 .profile-picture--container {
