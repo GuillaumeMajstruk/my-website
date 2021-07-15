@@ -291,7 +291,7 @@ a:visited {
 /* Small devices (landscape phones, 100px and up) */
 @media (min-width: 100px) {
   body {
-    padding: 0;
+    padding: 0 !important;
   }
 
   .container {
@@ -307,15 +307,14 @@ a:visited {
   }
   
   .background-header {
-    font-family: var(--title-font);
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%);
-    text-transform: uppercase;
-    font-size: 13.15rem;
-    color: var(--background-header-color);
-    z-index: -1;
+    display: none;
+  }
+  
+  #home-grid {
+    grid-template-columns: repeat(1, 1fr) !important;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem !important;
   }
 
   #skill-grid {
@@ -371,7 +370,7 @@ a:visited {
   }
 
   #navbar-mobile--grid {
-    padding: 2rem;
+    padding: 2rem 0;
     align-items: center;
     grid-template-columns: repeat(2, 1fr) !important;
   }
@@ -398,8 +397,21 @@ a:visited {
     width: 100vw;
   }
 
+  #home-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
   .background-header {
+    display: block;
+    font-family: var(--title-font);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    text-transform: uppercase;
     font-size: 18rem;
+    color: var(--background-header-color);
+    z-index: -1;
   }
 }
 
@@ -410,7 +422,7 @@ a:visited {
   }
   .container {
     position: relative;
-    max-width: 1366px;
+    max-width: 900px;
     margin-left: auto !important;
     margin-right: auto !important;
   }
@@ -508,6 +520,9 @@ a:visited {
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  .container {
+    max-width: 1366px !important;
+  }
 }
 
 /* buttons settings */
@@ -623,6 +638,13 @@ h5 {
 }
 
 /* grids of the application */
+#home-grid {
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+}
+
+
 #skill-grid {
   grid-template-columns: repeat(3, 1fr);
   justify-items: flex-start;
