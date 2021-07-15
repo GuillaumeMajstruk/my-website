@@ -8,6 +8,7 @@ import { useState } from 'react';
 import Home from "../views/Home";
 import Skills from "../views/Skills";
 import Experience from '../views/Experience';
+import Hobbies from '../views/Hobbies';
 
 const Nav = () => {
     const [isMenuOpen, setMenuOpen] = useState(false);
@@ -48,6 +49,9 @@ const Nav = () => {
                 </Route>
                 <Route path="/experience">
                     <Experience />
+                </Route>
+                <Route path="/hobbies">
+                    <Hobbies />
                 </Route>
             </Switch>
             <div className="navbar-mobile">
