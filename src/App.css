@@ -776,7 +776,6 @@ h5 {
   background: var(--slider-btn-background) url('./assets/sun-solid.svg');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 18px;
   border: 1px solid var(--slider-btn-color);
   content: "";
 }
@@ -788,7 +787,6 @@ h5 {
   background: var(--slider-btn-background) url('./assets/moon-solid.svg');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 18px;
 }
 
 .slider.active:hover::before {
