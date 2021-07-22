@@ -9,6 +9,7 @@ import Home from "../views/Home";
 import Skills from "../views/Skills";
 import Experience from '../views/Experience';
 import Hobbies from '../views/Hobbies';
+import Contact from '../views/Contact';
 
 const Nav = () => {
     const [isMenuOpen, setMenuOpen] = useState(false);
@@ -52,6 +53,9 @@ const Nav = () => {
                 </Route>
                 <Route path="/hobbies">
                     <Hobbies />
+                </Route>
+                <Route path="/contact">
+                    <Contact />
                 </Route>
             </Switch>
             <div className="navbar-mobile">

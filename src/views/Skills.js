@@ -3,7 +3,7 @@ import { faCode, faLanguage, faUserTie } from '@fortawesome/free-solid-svg-icons
 
 const Skills = () => {
     return (
-        <div className="container fullscreen center-h center-v">
+        <div className="column container fullscreen center-h center-v">
             <div className="background-header">skills</div>
             <div className="center-h h-100 ml-auto mr-auto" style={{width: "90%"}}>
                 <div className="column h-100 center-v">

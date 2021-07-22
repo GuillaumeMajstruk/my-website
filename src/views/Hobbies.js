@@ -3,9 +3,9 @@ import { faEllipsisH, faGamepad, faRunning } from '@fortawesome/free-solid-svg-i
 
 const Hobbies = () => {
     return (
-        <div className="container fullscreen center-h center-v">
+        <div className="column container fullscreen center-h center-v">
             <div className="background-header">hobbies</div>
-            <div className="center-h h-100 ml-auto mr-auto" style={{width: "90%"}}>
+            <div className=" center-h h-100 ml-auto mr-auto" style={{width: "90%"}}>
                 <div className="column h-100 center-v">
                     <h2 className="font-rhyme text-light">WHAT ARE MY <strong>HOBBIES?</strong> &nbsp;<Icon icon={faGamepad}></Icon></h2>
                     <h3 className="font-space text-normal mt-xs">Want to talk about something or <strong>nothing</strong>? <button className="button text-bold">contact me</button></h3>

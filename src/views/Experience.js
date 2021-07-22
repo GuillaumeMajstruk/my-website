@@ -3,7 +3,7 @@ import { faUserTie } from '@fortawesome/free-solid-svg-icons';
 
 const Experience = () => {
     return (
-        <div className="container fullscreen center-h center-v">
+        <div className="column container fullscreen center-h center-v">
             <div className="background-header">xp</div>
             <div className="center-h h-100 ml-auto mr-auto" style={{width: "90%"}}>
                 <div className="column h-100 center-v">
