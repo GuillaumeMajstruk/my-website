@@ -848,7 +848,7 @@ h5 {
 }
 
 .slider {
-  position: relative;
+  /* position: relative; */
   width: 34px;
   height: 22px;
   border-radius: calc(22px / 2);
@@ -859,7 +859,7 @@ h5 {
 .slider::before {
   display: inline-block;
   transition: all .2s ease-in;
-  position: absolute;
+  /* position: relative; */
   width: 34px;
   height: 34px;
   border-radius: 50%;
