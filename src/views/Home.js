@@ -4,7 +4,7 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Home = () => {
     return (
-        <div className="container fullscreen center-h center-v">
+        <div className="column container fullscreen center-h center-v">
             <div className="background-header">home</div>
             <div className="row center-h m-auto h-100">
                 <div className="column center-h">

@@ -37,7 +37,9 @@ const Nav = () => {
                     <NavLink exact className="navbar--link" activeClassName="navbar--link-active" to="/contact">contact</NavLink>
                 </div>
                 <div className="navbar--right">
-                    <div className="button button-outlined">download resume</div>
+                    <a href="cv.pdf" download="cv">
+                        <div className="button button-outlined">download resume</div>
+                    </a>
                     <div id="theme-slider" className="slider active" onClick={() => switchTheme()}></div>
                 </div>
             </div>
@@ -69,7 +71,9 @@ const Nav = () => {
                             <div><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/contact">contact</NavLink></div>
                         </div>
                         <div>
-                            <div><div className="button button-outlined">download resume</div></div>
+                            <a href="cv.pdf" download="cv">
+                                <div className="button button-outlined">download resume</div>
+                            </a>
                         </div>
                     </div>
                 </div>
