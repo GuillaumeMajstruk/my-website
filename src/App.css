@@ -875,18 +875,12 @@ h5 {
   backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  z-index: 1;
 }
 
 .slider.active::before {
-  display: inline-block;
   transform: translate(0, -50%);
-  color: var(--slider-btn-background);
-  background: var(--slider-btn-background) url('./assets/moon-solid.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+  background-image: url('./assets/moon-solid.svg');
 }
 
 .slider.active:hover::before {
