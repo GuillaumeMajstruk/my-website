@@ -848,7 +848,7 @@ h5 {
 }
 
 .slider {
-  /* position: relative; */
+  position: relative;
   width: 34px;
   height: 22px;
   border-radius: calc(22px / 2);
@@ -858,8 +858,8 @@ h5 {
 
 .slider::before {
   display: inline-block;
-  transition: all .2s ease-in;
-  /* position: relative; */
+  transition: transform .2s ease-in;
+  position: absolute;
   width: 34px;
   height: 34px;
   border-radius: 50%;
@@ -867,7 +867,8 @@ h5 {
   left: 50%;
   transform: translate(-100%, -50%);
   color: var(--slider-btn-color);
-  background: var(--slider-btn-background) url('./assets/sun-solid.svg');
+  background-color: var(--slider-btn-background);
+  background-image: url('./assets/sun-solid.svg');
   background-repeat: no-repeat;
   background-position: center;
   border: 1px solid var(--slider-btn-color);
