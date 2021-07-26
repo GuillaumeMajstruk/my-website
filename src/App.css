@@ -706,7 +706,8 @@ a:visited {
   font-weight: bolder;
   transition: all .15s ease-in;
   background-color: var(--accent-color);
-  color: var(--text-color-button);
+  color: var(--text-color-button) !important;
+  white-space: nowrap;
 }
 
 .button:disabled {
@@ -720,12 +721,12 @@ a:visited {
 
 .button-outlined {
   border: 1px solid var(--accent-color);
-  color: var(--accent-color);
+  color: var(--accent-color) !important;
   background-color: transparent;
 }
 
 .button-outlined:hover {
-  color: white;
+  color: white !important;
   background-color: var(--accent-color);
 }
 /* END OF buttons settings */

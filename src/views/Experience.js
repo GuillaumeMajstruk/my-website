@@ -1,5 +1,6 @@
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faUserTie } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const Experience = () => {
     const experiences = [
@@ -93,7 +94,7 @@ const Experience = () => {
                 <div className="column h-100 center-v">
                     <h2 className="font-rhyme text-light mt-sm">WHAT ABOUT MY <strong>CAREER?</strong>&nbsp;<Icon icon={faUserTie}></Icon></h2>
                     <span className="font-normal">Here is a timeline of it</span>
-                    <h3 className="font-space text-normal mt-xs">You have a project? Talk with me! <button className="button text-bold">contact me</button></h3>
+                    <h3 className="font-space text-normal mt-xs">You have a project? Talk with me! <Link className="button text-bold" to='/contact'>contact me</Link></h3>
                     <div className="xp--container mt-md mb-sm">
                         <div className="xp--timeline"></div>
                         {experiences.map(experience => {

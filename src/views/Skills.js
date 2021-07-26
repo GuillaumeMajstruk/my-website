@@ -1,6 +1,6 @@
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faCode, faLanguage, faUserTie } from '@fortawesome/free-solid-svg-icons';
-
+import { Link } from 'react-router-dom';
 const Skills = () => {
     return (
         <div className="column container fullscreen center-h center-v">
@@ -8,7 +8,7 @@ const Skills = () => {
             <div className="center-h h-100 ml-auto mr-auto" style={{width: "90%"}}>
                 <div className="column h-100 center-v">
                     <h2 className="font-rhyme text-light">WHAT ARE MY <strong>SKILLS? #</strong></h2>
-                    <h3 className="font-space text-normal mt-xs">Any question(s)? Fill free to <button className="button text-bold">contact me</button></h3>
+                    <h3 className="font-space text-normal mt-xs">Any question(s)? Fill free to <Link className="button text-bold" to='/contact'>contact me</Link></h3>
                     <div id="skill-grid" className="grid-wrapper space-between mt-lg w-100" style={{fontSize: "1.8rem"}}>
                         <div className="w-100">
                             <div className="row space-between mb-xs">
