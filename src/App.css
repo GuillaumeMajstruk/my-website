@@ -872,6 +872,9 @@ h5 {
   background-position: center;
   border: 1px solid var(--slider-btn-color);
   content: "";
+  backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .slider.active::before {
@@ -881,6 +884,9 @@ h5 {
   background: var(--slider-btn-background) url('./assets/moon-solid.svg');
   background-repeat: no-repeat;
   background-position: center;
+  backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .slider.active:hover::before {
