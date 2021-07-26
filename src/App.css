@@ -76,6 +76,7 @@ body {
   font-size: var(--body-font-size);
   font-family: var(--text-font), sans-serif;
   overflow-x: hidden !important;
+  text-overflow: hidden !important;
 }
 
 /* margins, height, width ... utilities */
@@ -358,9 +359,18 @@ a:visited {
     width: auto !important;
     padding: 4rem !important;
   }
-  
+
   .background-header {
-    display: none;
+    display: block;
+    font-family: var(--title-font);
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    text-transform: uppercase;
+    font-size: 9rem;
+    color: var(--background-header-color);
+    z-index: -1;
   }
 
   .gap {
@@ -372,6 +382,10 @@ a:visited {
     justify-content: center;
     align-items: center;
     gap: 3rem !important;
+  }
+
+  #hobbies-container {
+    width: 100% !important;
   }
 
   #hobbies-grid {
@@ -457,6 +471,32 @@ a:visited {
     font-size: 2.4rem;
     color: var(--text-color);
   }
+
+  .xp--container {
+    width: 100% !important;
+  }
+
+  .xp--timeline {
+    left: -.2rem !important;
+  }
+
+  .xp--content-container {
+    width: 100% !important;
+    margin-left: 2rem;
+  }
+
+  .xp--container>.xp--content-container:nth-child(2n+1) {
+    margin-left: none;
+    justify-content: flex-start;
+  }
+
+  .xp--container>.xp--content-container::before {
+    right: calc(100% + 1rem) !important;
+  }
+
+  .xp--content {
+    width: 100% !important;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -480,21 +520,49 @@ a:visited {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 
+  #hobbies-container {
+    width: 80% !important;
+  }
+
   #hobbies-grid {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 
+  #hobbies-grid>.left {
+    text-align: start;
+  }
+
+  #hobbies-grid>.right {
+    text-align: end;
+  }
+
   .background-header {
-    display: block;
-    font-family: var(--title-font);
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%);
-    text-transform: uppercase;
     font-size: 18rem;
-    color: var(--background-header-color);
-    z-index: -1;
+  }
+
+  .xp--timeline {
+    left: calc(50% - .2rem) !important;
+  }
+
+  .xp--content-container {
+    width: 50% !important;
+    margin-left: 0 !important;
+  }
+  .xp--container>.xp--content-container:nth-child(2n+1) {
+    margin-left: auto !important;
+    justify-content: flex-end;
+  }
+
+  .xp--container > .xp--content-container::before {
+    right: calc(100% - 1rem) !important;
+  }
+
+  .xp--container > .xp--content-container:nth-child(2n)::before {
+    right: -1rem !important;
+  }
+
+  .xp--content {
+    width: 85% !important;
   }
 }
 
@@ -606,6 +674,14 @@ a:visited {
 @media (min-width: 1400px) {
   .container {
     max-width: 1366px !important;
+  }
+
+  .xp--container {
+    width: 75% !important;
+  }
+
+  #hobbies-container {
+    width: 50% !important;
   }
 
   #hobbies-grid {
@@ -813,4 +889,91 @@ h5 {
 }
 .slider:hover::before {
   transform: translate(-100%, -50%) scale(110%);
+}
+
+
+/* Experience view */
+.xp--container {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4rem 0;
+}
+
+.xp--timeline {
+  position: absolute;
+  width: .2rem;
+  height: 100%;
+  top: 0;
+  background-color: var(--text-color);
+}
+
+.xp--content-container {
+  position: relative;
+  display: flex;
+}
+
+.xp--container > .xp--content-container:not(:last-child) {
+  margin-bottom: 6rem;
+}
+
+.xp--container > .xp--content-container::before {
+  position: absolute;
+  border-radius: 50%;
+  top: -1rem;
+  content: '';
+  width: 2.2rem;
+  height: 2.2rem;
+  background-color: var(--text-color);
+}
+
+.xp--content {
+  padding: 1rem;
+  background-color: var(--slider-background);
+  display: flex;
+  flex-direction: column;
+  border-radius: 2rem;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.xp--content .xp--content-header {
+  display: block;
+  font-family: 'BioRhyme';
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.xp--content .xp--content-desc {
+  margin: 2rem 0;
+  display: block;
+  font-family: 'Space Mono';
+  font-size: 1.8rem;
+}
+
+.xp--content .xp--content-technos {
+  align-self: flex-end;
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 1.4rem;
+  color: var(--text-muted);
+  font-weight: bold;
+
+}
+
+.xp--content .xp--content-technos > div::before {
+  content: '#';
+}
+
+.xp--content .xp--content-technos > div:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.xp--content .xp--content-dates {
+  font-size: .8em;
+  text-transform: none;
 }

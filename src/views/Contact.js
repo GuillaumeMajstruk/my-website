@@ -33,7 +33,6 @@ const Contact = () => {
             );
             toast.success("Your message were succesfully sent.");
         } catch (error) {
-            console.log("ERROR", error);
             toast.error("An error occured sending your message...")
         }
         setLoading(false);
@@ -65,8 +64,9 @@ const Contact = () => {
                         flexFlow: "row wrap"
                     }}>
                         <div className="input-layout">
-                            <input type="text" placeholder="MAIL..." name="from_email" {...register("from_email", {required: true})}></input>
+                            <input type="mail" placeholder="MAIL..." name="from_email" {...register("from_email", {required: true, validate: testMail})}></input>
                             {errors.from_email?.type === 'required' &&  <div className="input-error">Mail is required</div>}
+                            {errors.from_email?.type === 'validate' &&  <div className="input-error">email format is incorrect</div>}
                         </div>
                         <div className="input-layout">
                             <input type="text" placeholder="SUBJECT..." name="subject" {...register("subject", {required: true})}></input>
@@ -89,4 +89,9 @@ const Contact = () => {
     )
 }
 
+
+const testMail = (input) => {
+    const mailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return mailRegex.test(String(input).toLowerCase());
+}
 export default Contact;
