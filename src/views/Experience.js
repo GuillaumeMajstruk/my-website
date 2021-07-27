@@ -16,7 +16,8 @@ const Experience = () => {
                 "React",
                 "Solidty",
                 "Bolckchain"
-            ]
+            ],
+            class: "xp--content-pro"
         },
         {
             id: 1,
@@ -32,7 +33,8 @@ const Experience = () => {
                 "MongoDB",
                 "Neo4j",
                 "Python"
-            ]
+            ],
+            class: "xp--content-pro"
         },
         {
             id: 2,
@@ -46,7 +48,8 @@ const Experience = () => {
                 "Angular7",
                 "AWS",
                 "Python"
-            ]
+            ],
+            class: "xp--content-pro"
         },
         {
             id: 3,
@@ -56,7 +59,8 @@ const Experience = () => {
                 to: "may 2019"
             },
             desc: "Maintenance and workship on aircraft engines",
-            techs: []
+            techs: [],
+            class: "xp--content-pro"
         },
         {
             id: 4,
@@ -65,7 +69,8 @@ const Experience = () => {
                 from: "2017",
                 to: "2019"
             },
-            desc: "42 school (Paris campus)"
+            desc: "42 school (Paris campus)",
+            class: "xp--content-formation"
         },
         {
             id: 5,
@@ -74,7 +79,8 @@ const Experience = () => {
                 from: "2012",
                 to: "2014"
             },
-            desc: "mention très bien"
+            desc: "mention très bien",
+            class: "xp--content-formation"
         },
         {
             id: 6,
@@ -83,7 +89,8 @@ const Experience = () => {
                 from: "2009",
                 to: "2012"
             },
-            desc: "Mention Assez bien"
+            desc: "Mention Assez bien",
+            class: "xp--content-formation"
         }
     ]
 
@@ -99,8 +106,8 @@ const Experience = () => {
                         <div className="xp--timeline"></div>
                         {experiences.map(experience => {
                             return (
-                                <div className="xp--content-container" key={experience.id}>
-                                    <div className="xp--content">
+                                <div className={"xp--content-container " + experience.class + "-b"} key={experience.id}>
+                                    <div className={"xp--content " + experience.class}>
                                         <div className="xp--content-header">
                                             <div>{experience.title}</div>
                                             <div className="xp--content-dates">{experience.dates.from} - {experience.dates.to}</div>
