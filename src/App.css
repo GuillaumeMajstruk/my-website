@@ -978,3 +978,12 @@ h5 {
   font-size: .8em;
   text-transform: none;
 }
+/* EOF experience css */
+
+/* TypedJs cursor */
+.typed-cursor {
+  margin-top: 4rem;
+  font-size: var(--h2-font-size);
+  margin-left: -1rem;
+}
+/* EOF TypedJs cursor */

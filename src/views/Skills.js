@@ -26,6 +26,10 @@ const Skills = () => {
                                 </div>
                                 <div className="text-end text-muted font-space">advanced</div>
                                 <div className="text-start font-rhyme">
+                                    <div>ReactJs</div>
+                                </div>
+                                <div className="text-end text-muted font-space">High</div>
+                                <div className="text-start font-rhyme">
                                     <div>Vue.js</div>
                                 </div>
                                 <div className="text-end text-muted font-space">Medium</div>
@@ -33,7 +37,7 @@ const Skills = () => {
                                     <div>Html</div>
                                     <div>Css</div>
                                 </div>
-                                <div className="text-end text-muted font-space">High</div>
+                                <div className="text-end text-muted font-space">Advanced</div>
                                 <div className="text-start font-rhyme">
                                     <div>MongoDb</div>
                                 </div>
