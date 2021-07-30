@@ -102,6 +102,16 @@ const Experience = () => {
                     <h2 className="font-rhyme text-light mt-sm">WHAT ABOUT MY <strong>CAREER?</strong>&nbsp;<Icon icon={faUserTie}></Icon></h2>
                     <span className="font-normal">Here is a timeline of it</span>
                     <h3 className="font-space text-normal mt-xs">You have a project? Talk with me! <Link className="button text-bold" to='/contact'>contact me</Link></h3>
+                    {/* <div className="xp--legend">
+                        <div className="row gap">
+                            <div className="circle-pro"></div>
+                            <div>Professional</div>
+                        </div>
+                        <div className="row gap">
+                            <div className="circle-formation"></div>
+                            <div>Studies / formations</div>
+                        </div>
+                    </div> */}
                     <div className="xp--container mt-md mb-sm">
                         <div className="xp--timeline"></div>
                         {experiences.map(experience => {

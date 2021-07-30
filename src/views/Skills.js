@@ -33,19 +33,19 @@ const Skills = () => {
                                     <div>Vue.js</div>
                                 </div>
                                 <div className="text-end text-muted font-space">Medium</div>
-                                <div className="text-start font-rhyme">
+                                {/* <div className="text-start font-rhyme">
                                     <div>Html</div>
                                     <div>Css</div>
                                 </div>
-                                <div className="text-end text-muted font-space">Advanced</div>
+                                <div className="text-end text-muted font-space">Advanced</div> */}
                                 <div className="text-start font-rhyme">
-                                    <div>MongoDb</div>
+                                    <div>Databases (SQL, MongoDB, Neo4j)</div>
                                 </div>
                                 <div className="text-end text-muted font-space">High</div>
-                                <div className="text-start font-rhyme">
+                                {/* <div className="text-start font-rhyme">
                                     <div>Neo4j</div>
                                 </div>
-                                <div className="text-end text-muted font-space">High</div>
+                                <div className="text-end text-muted font-space">High</div> */}
                                 <div className="text-start font-rhyme">
                                     <div>Git</div>
                                 </div>

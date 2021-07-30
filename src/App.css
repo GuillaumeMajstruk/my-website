@@ -18,8 +18,8 @@
   --slider-btn-color: #0E0E0E;
   --xp-bg-color-formation: rgba(158, 228, 147, 0.3);
   --xp-bg-color-pro: rgba(246, 190, 154, 0.3);
-  --xp-bg-color-formation-hovered: rgba(158, 228, 147, 0.8);
-  --xp-bg-color-pro-hovered: rgba(246, 190, 154, 0.8);
+  --xp-bg-color-formation-hovered: rgba(158, 228, 147, 0.5);
+  --xp-bg-color-pro-hovered: rgba(246, 190, 154, 0.5);
   --xp-bg-color-formation-bullet: rgb(158, 228, 147);
   --xp-bg-color-pro-bullet: rgb(246, 189, 154);
 
@@ -56,8 +56,8 @@
   --slider-btn-color: #FFFEFF;
   --xp-bg-color-formation: rgba(158, 228, 147, 0.3);
   --xp-bg-color-pro: rgba(246, 190, 154, 0.3);
-  --xp-bg-color-formation-hovered: rgba(158, 228, 147, 0.8);
-  --xp-bg-color-pro-hovered: rgba(246, 190, 154, 0.8);
+  --xp-bg-color-formation-hovered: rgba(158, 228, 147, 0.4);
+  --xp-bg-color-pro-hovered: rgba(246, 190, 154, 0.4);
   --xp-bg-color-formation-bullet: rgb(158, 228, 147);
   --xp-bg-color-pro-bullet: rgb(246, 189, 154);
 
@@ -249,6 +249,17 @@ button {
 a {
   color: var(--text-color);
   text-decoration: none;
+}
+
+#logo img{
+  max-width: 4rem;
+  margin-right: 4rem;
+  display: flex;
+}
+
+#logo.bigger img{
+  max-width: 5rem;
+  margin-right: 0 !important;
 }
 
 input,
@@ -584,7 +595,7 @@ a:visited {
   }
 
   .container {
-    max-width: 900px;
+    max-width: 980px;
   }
 
   .fullscreen {
@@ -634,6 +645,8 @@ a:visited {
   .navbar--left {
     display: flex;
     flex-direction: row;
+    height: 70px;
+    align-items: center;
   }
 
   .navbar--right {
@@ -643,7 +656,7 @@ a:visited {
   }
 
   .navbar--right *:not(:last-child) {
-    margin-right: 4rem;
+    margin-right: 3rem;
   }
 
   .navbar--link:not(:last-child) {
@@ -947,17 +960,21 @@ h5 {
 }
 
 .xp--content {
-  padding: 1rem;
-  background-color: var(--slider-background);
   display: flex;
   flex-direction: column; 
-  border-radius: 2rem;
-  text-align: center;
   justify-content: space-between;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 2rem;
 }
 
 .xp--content-pro {
+  transition: background .2s ease-in;
   background-color: var(--xp-bg-color-pro);
+}
+
+.xp--content-pro:hover {
+  background-color: var(--xp-bg-color-pro-hovered);
 }
 
 .xp--content-pro-b {
@@ -973,7 +990,12 @@ h5 {
 }
 
 .xp--content-formation {
+  transition: .2s ease-in;
   background-color: var(--xp-bg-color-formation);
+}
+
+.xp--content-formation:hover {
+  background-color: var(--xp-bg-color-formation-hovered);
 }
 
 .xp--content-formation-b {
@@ -1024,6 +1046,28 @@ h5 {
 .xp--content .xp--content-dates {
   font-size: .8em;
   text-transform: none;
+}
+
+.xp--legend {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 20%;
+  right: 10%;
+}
+
+.circle-pro {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--xp-bg-color-pro-bullet);
+}
+
+.circle-formation {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--xp-bg-color-formation-bullet);
 }
 /* EOF experience css */
 

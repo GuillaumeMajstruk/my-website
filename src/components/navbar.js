@@ -10,6 +10,7 @@ import Skills from "../views/Skills";
 import Experience from '../views/Experience';
 import Hobbies from '../views/Hobbies';
 import Contact from '../views/Contact';
+import NotFound from '../views/NotFound';
 
 const Nav = () => {
     const [isMenuOpen, setMenuOpen] = useState(false);
@@ -30,6 +31,7 @@ const Nav = () => {
         <Router>
             <div className="navbar">
                 <div className="navbar--left">
+                    <NavLink exact id="logo" to="/"><img src="logo192.png" alt="logo"></img></NavLink>
                     <NavLink exact className="navbar--link" activeClassName="navbar--link-active" to="/">home</NavLink>
                     <NavLink exact className="navbar--link" activeClassName="navbar--link-active" to="/skills">skills</NavLink>
                     <NavLink exact className="navbar--link" activeClassName="navbar--link-active" to="/experience">experience</NavLink>
@@ -59,16 +61,19 @@ const Nav = () => {
                 <Route path="/contact">
                     <Contact />
                 </Route>
+                <Route>
+                    <NotFound />
+                </Route>
             </Switch>
             <div className="navbar-mobile">
                 <div id="navbar-mobile-actions" className="navbar-mobile--actions">
                     <div id="navbar-mobile--grid" className="grid-wrapper">
                         <div>
-                            <div className="mb-xs"><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/">home</NavLink></div>
-                            <div className="mb-xs"><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/skills">skills</NavLink></div>
-                            <div className="mb-xs"><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/experience">experience</NavLink></div>
-                            <div className="mb-xs"><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/hobbies">hobbies</NavLink></div>
-                            <div><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/contact">contact</NavLink></div>
+                            <div className="mb-xs"><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/" onClick={() => openCloseMenu()}>home</NavLink></div>
+                            <div className="mb-xs"><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/skills" onClick={() => openCloseMenu()}>skills</NavLink></div>
+                            <div className="mb-xs"><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/experience" onClick={() => openCloseMenu()}>experience</NavLink></div>
+                            <div className="mb-xs"><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/hobbies" onClick={() => openCloseMenu()}>hobbies</NavLink></div>
+                            <div><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/contact" onClick={() => openCloseMenu()}>contact</NavLink></div>
                         </div>
                         <div>
                             <a href="cv.pdf" download="cv">
