@@ -396,6 +396,21 @@ a:visited {
     z-index: -1;
   }
 
+  .not-found--header {
+    /* color: var(--text-color); */
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .background-header--not-found {
+    color: var(--text-color);
+    font-size: var(--h1-font-size);
+    text-transform: capitalize;
+    font-weight: bold;
+  }
+
   .gap {
     gap: 1rem;
   }
