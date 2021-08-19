@@ -12,7 +12,7 @@ const Skills = () => {
                     <div id="skill-grid" className="grid-wrapper space-between mt-lg w-100" style={{fontSize: "1.8rem"}}>
                         <div className="w-100">
                             <div className="row space-between mb-xs">
-                                <h3 className="text-bold">Technicals</h3>
+                                <h3 className="text-bold">Hard skills</h3>
                                 <Icon icon={faCode}></Icon>
                             </div>
                             <div className="grid-item">
@@ -20,19 +20,32 @@ const Skills = () => {
                                     <div>Javascript</div>
                                     <div>Typescript</div>
                                 </div>
-                                <div className="text-end text-muted font-space">Advanced</div>
+                                <div className="text-end text-muted font-space">Proficient</div>
+                                <div className="text-start font-rhyme" >
+                                    <div>NodeJs</div>
+                                </div>
+                                <div className="text-end text-muted font-space">Proficient</div>
                                 <div className="text-start font-rhyme">
                                     <div>Angular 2+</div>
                                 </div>
-                                <div className="text-end text-muted font-space">advanced</div>
+                                <div className="text-end text-muted font-space">Proficient</div>
+                                <div className="text-start font-rhyme">
+                                    <div>Git</div>
+                                </div>
+                                <div className="text-end text-muted font-space">Proficient</div>
                                 <div className="text-start font-rhyme">
                                     <div>ReactJs</div>
                                 </div>
-                                <div className="text-end text-muted font-space">High</div>
+                                <div className="text-end text-muted font-space">Familiar</div>
                                 <div className="text-start font-rhyme">
                                     <div>Vue.js</div>
                                 </div>
-                                <div className="text-end text-muted font-space">Medium</div>
+                                <div className="text-end text-muted font-space">Familiar</div>
+                                <div className="text-start font-rhyme">
+                                    <div>C</div>
+                                    <div>C++</div>
+                                </div>
+                                <div className="text-end text-muted font-space">Familiar</div>
                                 {/* <div className="text-start font-rhyme">
                                     <div>Html</div>
                                     <div>Css</div>
@@ -41,24 +54,20 @@ const Skills = () => {
                                 <div className="text-start font-rhyme">
                                     <div>Databases (SQL, MongoDB, Neo4j)</div>
                                 </div>
-                                <div className="text-end text-muted font-space">High</div>
+                                <div className="text-end text-muted font-space">Familiar</div>
                                 {/* <div className="text-start font-rhyme">
                                     <div>Neo4j</div>
                                 </div>
                                 <div className="text-end text-muted font-space">High</div> */}
-                                <div className="text-start font-rhyme">
-                                    <div>Git</div>
-                                </div>
-                                <div className="text-end text-muted font-space">High</div>
-                                <div className="text-start font-rhyme">
+                                {/* <div className="text-start font-rhyme">
                                     <div>Docker</div>
                                 </div>
-                                <div className="text-end text-muted font-space">Beginner</div>
+                                <div className="text-end text-muted font-space">Beginner</div> */}
                             </div>
                         </div>
                         <div className="w-100">
                             <div className="row w-100 space-between mb-xs">
-                                <h3 className="text-bold">Professionals</h3>
+                                <h3 className="text-bold">Soft skills</h3>
                                 <Icon icon={faUserTie}></Icon>
                             </div>
                             <div className="grid-item">

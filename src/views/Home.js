@@ -12,9 +12,11 @@ const Home = () => {
         const options = {
             strings: [
                 'Fullstack Developper',
+                'Frontend Developper',
+                'Backend Developper',
                 'Blockchain Developper',
-                'Webdesigner',
-                'App architect'
+                'Webdesign',
+                'App Architecture'
             ],
             typeSpeed: 70,
             backSpeed: 90,
@@ -37,7 +39,7 @@ const Home = () => {
                         <img src="profile.png" alt="profile"></img>
                     </div>
                     <h3 className="text-normal mt-sm">MAJSTRUK GUILLAUME</h3>
-                    <h3 className="text-normal"><Icon icon={faCircle} transform="shrink-11"></Icon> 27 yo <Icon icon={faCircle} transform="shrink-11"></Icon></h3>
+                    <h3 className="text-normal"><Icon icon={faCircle} transform="shrink-11"></Icon> 28 yo <Icon icon={faCircle} transform="shrink-11"></Icon></h3>
                     <span style={{display: "flex", flexFlow: "row nowrap", alignItems: "center"}}>
                         <h2 className="mt-sm" ref={title}> </h2>
                     </span>
@@ -61,11 +63,11 @@ const Home = () => {
                             </div>
                             <div className="mt-xs">
                                 <Icon icon={faGithub} className="mr-xs"></Icon>
-                                <a style={{color: "var(--link-color)"}}href="https://www.google.com" rel="noreferrer" target="_blank">/GuillaumeMajstruk</a>
+                                <a style={{color: "var(--link-color)"}}href="https://github.com/GuillaumeMajstruk" rel="noreferrer" target="_blank">/GuillaumeMajstruk</a>
                             </div>
                             <div className="mt-xs">
                                 <Icon icon={faLinkedin} className="mr-xs"></Icon>
-                                <a style={{color: "var(--link-color)"}}href="https://www.google.com" rel="noreferrer" target="_blank">/in/guillaume-majstruk</a>
+                                <a style={{color: "var(--link-color)"}}href="https://www.linkedin.com/in/guillaume-majstruk/" rel="noreferrer" target="_blank">/in/guillaume-majstruk</a>
                             </div>
                         </div>
                     </div>
