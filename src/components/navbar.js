@@ -5,12 +5,15 @@ import {
     Route
 } from 'react-router-dom';
 import { useState } from 'react';
-import Home from "../views/Home";
-import Skills from "../views/Skills";
-import Experience from '../views/Experience';
-import Hobbies from '../views/Hobbies';
-import Contact from '../views/Contact';
-import NotFound from '../views/NotFound';
+import {
+    Contact,
+    Experience,
+    // Hobbies,
+    Home,
+    MyWork,
+    NotFound,
+    Skills
+} from "../views";
 
 const Nav = () => {
     const [isMenuOpen, setMenuOpen] = useState(false);
@@ -35,7 +38,8 @@ const Nav = () => {
                     <NavLink exact className="navbar--link" activeClassName="navbar--link-active" to="/">home</NavLink>
                     <NavLink exact className="navbar--link" activeClassName="navbar--link-active" to="/skills">skills</NavLink>
                     <NavLink exact className="navbar--link" activeClassName="navbar--link-active" to="/experience">experience</NavLink>
-                    <NavLink exact className="navbar--link" activeClassName="navbar--link-active" to="/hobbies">hobbies</NavLink>
+                    {/* <NavLink exact className="navbar--link" activeClassName="navbar--link-active" to="/hobbies">hobbies</NavLink> */}
+                    <NavLink exact className="navbar--link" activeClassName="navbar--link-active" to="/my-work">my work</NavLink>
                     <NavLink exact className="navbar--link" activeClassName="navbar--link-active" to="/contact">contact</NavLink>
                 </div>
                 <div className="navbar--right">
@@ -55,8 +59,11 @@ const Nav = () => {
                 <Route path="/experience">
                     <Experience />
                 </Route>
-                <Route path="/hobbies">
+                {/* <Route path="/hobbies">
                     <Hobbies />
+                </Route> */}
+                <Route path="/my-work">
+                    <MyWork />
                 </Route>
                 <Route path="/contact">
                     <Contact />
