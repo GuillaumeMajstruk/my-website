@@ -11,12 +11,10 @@ const Home = () => {
     useEffect(() => {
         const options = {
             strings: [
-                'Fullstack Developper',
-                'Frontend Developper',
-                'Backend Developper',
-                'Blockchain Developper',
-                'Webdesign',
-                'App Architecture'
+                'Web Fullstack Dev',
+                'Ui / Ux',
+                'Blockchain',
+                'App Architect'
             ],
             typeSpeed: 70,
             backSpeed: 90,
