@@ -20,7 +20,7 @@ const NotFound = () => {
                         <NavLink exact className="navbar-mobile--link navbar-mobile--link-active" to="/">home</NavLink>
                         <NavLink exact className="navbar-mobile--link navbar-mobile--link-active" to="/skills">skills</NavLink>
                         <NavLink exact className="navbar-mobile--link navbar-mobile--link-active" to="/experience">experience</NavLink>
-                        <NavLink exact className="navbar-mobile--link navbar-mobile--link-active" to="/hobbies">hobbies</NavLink>
+                        <NavLink exact className="navbar-mobile--link navbar-mobile--link-active" to="/my-work">my work</NavLink>
                         <NavLink exact className="navbar-mobile--link navbar-mobile--link-active" to="/contact">contact</NavLink>
                     </div>
                 </div>
