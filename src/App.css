@@ -27,6 +27,7 @@
   --navbar-height: 70px;
   --base-font-size: 62.5%;
   --body-font-size: 1.6rem;
+  --small-font-size: 1rem;
   --button-font-size: 1.4rem;
   --h1-font-size: 6.5rem;
   --h2-font-size: 4.1rem;
@@ -65,6 +66,7 @@
   --navbar-height: 70px;
   --base-font-size: 62.5%;
   --body-font-size: 1.6rem;
+  --small-font-size: 1rem;
   --button-font-size: 1.4rem;
   --h1-font-size: 6.5rem;
   --h2-font-size: 4.1rem;
@@ -113,7 +115,7 @@ body {
 }
 
 .w-50 {
-  width: 50%;
+  width: 50vw;
 }
 
 .m-auto {
@@ -122,6 +124,10 @@ body {
 
 .mt-auto {
   margin-top: auto;
+}
+
+.text-break {
+  white-space: pre-line;
 }
 
 .mb-auto {
@@ -239,6 +245,10 @@ body {
 
 .font-space {
   font-family: "Space Mono";
+}
+
+.font-size-sm {
+  font-size: var(--small-font-size)
 }
 
 /* END OF texts */
@@ -545,10 +555,18 @@ a:visited {
   .xp--date-container {
     display: none;
   }
+
+  .w-50 {
+    width: 80vw;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .w-50 {
+    width: 60vw;
+  }
+
   .container {
     position: relative !important;
     margin-left: auto !important;
@@ -631,6 +649,10 @@ a:visited {
     padding: 0 4rem;
   }
 
+  .w-50 {
+    width: 50vw;
+  }
+
   .container {
     max-width: 980px;
   }
@@ -647,7 +669,7 @@ a:visited {
 
   #skill-grid {
     grid-template-columns: repeat(3, 1fr) !important;
-    gap: 5rem !important;
+    gap: 10rem !important;
   }
 
   .column.center-v {
@@ -828,7 +850,7 @@ a:visited {
 .row {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   align-items: center;
 }
 

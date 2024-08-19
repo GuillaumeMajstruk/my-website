@@ -8,9 +8,7 @@ import { useState } from 'react';
 import {
     Contact,
     Experience,
-    // Hobbies,
     Home,
-    MyWork,
     NotFound,
     Skills
 } from "../views";
@@ -38,8 +36,6 @@ const Nav = () => {
                     <NavLink exact className="navbar--link" activeClassName="navbar--link-active" to="/">home</NavLink>
                     <NavLink exact className="navbar--link" activeClassName="navbar--link-active" to="/skills">skills</NavLink>
                     <NavLink exact className="navbar--link" activeClassName="navbar--link-active" to="/experience">experience</NavLink>
-                    {/* <NavLink exact className="navbar--link" activeClassName="navbar--link-active" to="/hobbies">hobbies</NavLink> */}
-                    <NavLink exact className="navbar--link" activeClassName="navbar--link-active" to="/my-work">my work</NavLink>
                     <NavLink exact className="navbar--link" activeClassName="navbar--link-active" to="/contact">contact</NavLink>
                 </div>
                 <div className="navbar--right">
@@ -59,12 +55,6 @@ const Nav = () => {
                 <Route path="/experience">
                     <Experience />
                 </Route>
-                {/* <Route path="/hobbies">
-                    <Hobbies />
-                </Route> */}
-                <Route path="/my-work">
-                    <MyWork />
-                </Route>
                 <Route path="/contact">
                     <Contact />
                 </Route>
@@ -79,7 +69,6 @@ const Nav = () => {
                             <div className="mb-xs"><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/" onClick={() => openCloseMenu()}>home</NavLink></div>
                             <div className="mb-xs"><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/skills" onClick={() => openCloseMenu()}>skills</NavLink></div>
                             <div className="mb-xs"><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/experience" onClick={() => openCloseMenu()}>experience</NavLink></div>
-                            <div className="mb-xs"><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/my-work" onClick={() => openCloseMenu()}>my work</NavLink></div>
                             <div><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/contact" onClick={() => openCloseMenu()}>contact</NavLink></div>
                         </div>
                         <div>

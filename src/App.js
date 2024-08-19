@@ -4,6 +4,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { hotjar } from 'react-hotjar';
 import { useEffect } from 'react';
+import { Copyright } from './views';
 require('dotenv').config();
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         draggable
         pauseOnHover/>
       <Nav />
+      <Copyright />
     </div>
   );
 }

@@ -1,33 +1,8 @@
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt, faCircle } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { useEffect, useRef } from 'react';
-import Typed from 'typed.js';
 
 const Home = () => {
-    const title = useRef(null);
-    const typed = useRef(null);
-
-    useEffect(() => {
-        const options = {
-            strings: [
-                'Web Fullstack Dev',
-                'Ui / Ux',
-                'Blockchain',
-                'App Architect'
-            ],
-            typeSpeed: 70,
-            backSpeed: 90,
-            backDelay: 2000,
-            loop: true
-        };
-        
-        typed.current = new Typed(title.current, options);
-
-        return () => {
-            typed.current.destroy();
-        }
-    })
     return (
         <div className="column container fullscreen center-h center-v">
             <div className="background-header">home</div>
@@ -36,38 +11,34 @@ const Home = () => {
                     <div className="profile-picture--container">
                         <img src="profile.png" alt="profile"></img>
                     </div>
-                    <h3 className="text-normal mt-sm">MAJSTRUK GUILLAUME</h3>
-                    <h3 className="text-normal"><Icon icon={faCircle} transform="shrink-11"></Icon> 28 yo <Icon icon={faCircle} transform="shrink-11"></Icon></h3>
-                    <span style={{display: "flex", flexFlow: "row nowrap", alignItems: "center"}}>
-                        <h2 className="mt-sm" ref={title}> </h2>
+                    <span style={{ display: "flex", flexFlow: "row nowrap", alignItems: "center", minHeight: "110px" }}>
+                        <h2 className="mt-sm">Expert Web Fullstack</h2>
                     </span>
-                    <h3 className="underlined font-space">OPEN TO WORK</h3>
-                    <div id="home-grid" className="grid-wrapper mt-lg w-100">
+                    <h3 className="underlined font-space">EN RECHERCHE DE MISSION</h3>
+                    <div className="mt-md mb-md">
                         <div>
-                            <div className="text-bold" style={{fontSize: "2rem"}}>42, Paris</div>                            
-                            <div>Junior</div>
-                            <br></br>
-                            <div className="text-bold" style={{fontSize: "2rem"}}>Aeronautics Mechanics Graduation</div>                            
-                            <div>Very Good</div>
-                            <br></br>
-                            <div className="text-bold" style={{fontSize: "2rem"}}>Scientific Graduation</div>                            
-                            <div>Well</div>
-                            <br></br>
+                            <Icon icon={faMapMarkerAlt} className="mr-xs"></Icon>
+                            Chantilly, Oise, France
                         </div>
-                        <div>
-                            <div>
-                                <Icon icon={faMapMarkerAlt} className="mr-xs"></Icon>
-                                Chantilly, Oise, France
-                            </div>
-                            <div className="mt-xs">
-                                <Icon icon={faGithub} className="mr-xs"></Icon>
-                                <a style={{color: "var(--link-color)"}}href="https://github.com/GuillaumeMajstruk" rel="noreferrer" target="_blank">/GuillaumeMajstruk</a>
-                            </div>
-                            <div className="mt-xs">
-                                <Icon icon={faLinkedin} className="mr-xs"></Icon>
-                                <a style={{color: "var(--link-color)"}}href="https://www.linkedin.com/in/guillaume-majstruk/" rel="noreferrer" target="_blank">/in/guillaume-majstruk</a>
-                            </div>
+                        <div className="mt-xs">
+                            <Icon icon={faGithub} className="mr-xs"></Icon>
+                            <a style={{ color: "var(--link-color)" }} href="https://github.com/GuillaumeMajstruk" rel="noreferrer" target="_blank">/GuillaumeMajstruk</a>
                         </div>
+                        <div className="mt-xs">
+                            <Icon icon={faLinkedin} className="mr-xs"></Icon>
+                            <a style={{ color: "var(--link-color)" }} href="https://www.linkedin.com/in/guillaume-majstruk/" rel="noreferrer" target="_blank">/in/guillaume-majstruk</a>
+                        </div>
+                    </div>
+                    <div className='text-break w-50 text-start mb-md'>
+                        Développeur fullstack spécialisé  <b>Javascript</b> / <b>Typescript</b>
+                        <br /><br />
+                        Je mets à disposition mon expertise pour vous proposer des solutions performantes à vos besoins applicatifs. Que ce soit une Marketplace, un site d'E-commerce, une application web ou mobile, ma démarche sera centrée sur votre besoin 🫵
+                        <br /><br />
+                        🚀 Je m'engage à fournir des solutions qui non seulement répondent aux exigences techniques mais aussi améliorent l'expérience utilisateur et contribuent à la réussite de vos projets.
+                        <br /><br />
+                        📈 En quête de qualité et d'excellence, je suis prêt à relever de nouveaux défis et à collaborer pour transformer vos idées en réalités.
+                        <br /><br />
+                        Langues: 🇫🇷 🏴󠁧󠁢󠁥󠁮󠁧󠁿 🇪🇸
                     </div>
                 </div>
             </div>

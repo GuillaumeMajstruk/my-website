@@ -16,7 +16,7 @@ const Experience = () => {
                         <div className="xp--timeline"></div>
                         {experiences.map((experience, index) => {
                             return (
-                                <div className={"xp--content-container " + experience.class + "-b"} key={experience.id}>
+                                <div className={"xp--content-container " + experience.class + "-b"} key={experience.title}>
                                     {
                                         index % 2 !== 0 ? <div className="xp--date-container">
                                             <span>{experience.dates.to}</span>
