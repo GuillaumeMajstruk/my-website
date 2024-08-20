@@ -12,8 +12,10 @@ import {
     NotFound,
     Skills
 } from "../views";
+import { LanguageSelector } from './language-select';
+import { withNamespaces } from 'react-i18next';
 
-const Nav = () => {
+const Nav = ({t}) => {
     const [isMenuOpen, setMenuOpen] = useState(false);
 
     const switchTheme = () => {
@@ -33,18 +35,20 @@ const Nav = () => {
             <div className="navbar">
                 <div className="navbar--left">
                     <NavLink exact id="logo" to="/"><img src="logo192.png" alt="logo"></img></NavLink>
-                    <NavLink exact className="navbar--link" activeClassName="navbar--link-active" to="/">home</NavLink>
-                    <NavLink exact className="navbar--link" activeClassName="navbar--link-active" to="/skills">skills</NavLink>
-                    <NavLink exact className="navbar--link" activeClassName="navbar--link-active" to="/experience">experience</NavLink>
-                    <NavLink exact className="navbar--link" activeClassName="navbar--link-active" to="/contact">contact</NavLink>
+                    <NavLink exact className="navbar--link" activeClassName="navbar--link-active" to="/">{t('navigation.home')}</NavLink>
+                    <NavLink exact className="navbar--link" activeClassName="navbar--link-active" to="/skills">{t('navigation.skills')}</NavLink>
+                    <NavLink exact className="navbar--link" activeClassName="navbar--link-active" to="/experience">{t('navigation.xp')}</NavLink>
+                    <NavLink exact className="navbar--link" activeClassName="navbar--link-active" to="/contact">{t('navigation.contact')}</NavLink>
                 </div>
                 <div className="navbar--right">
                     <a href="cv-guillaume-majstruk.pdf" download="Majstruk-Guillaume-Resume">
                         <div className="button button-outlined">download resume</div>
                     </a>
+                    <LanguageSelector />
                     <div id="theme-slider" className="slider active" onClick={() => switchTheme()}></div>
                 </div>
             </div>
+            <div></div>
             <Switch>
                 <Route exact path="/">
                     <Home />
@@ -66,10 +70,10 @@ const Nav = () => {
                 <div id="navbar-mobile-actions" className="navbar-mobile--actions">
                     <div id="navbar-mobile--grid" className="grid-wrapper">
                         <div>
-                            <div className="mb-xs"><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/" onClick={() => openCloseMenu()}>home</NavLink></div>
-                            <div className="mb-xs"><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/skills" onClick={() => openCloseMenu()}>skills</NavLink></div>
-                            <div className="mb-xs"><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/experience" onClick={() => openCloseMenu()}>experience</NavLink></div>
-                            <div><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/contact" onClick={() => openCloseMenu()}>contact</NavLink></div>
+                            <div className="mb-xs"><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/" onClick={() => openCloseMenu()}>{t('navigation.home')}</NavLink></div>
+                            <div className="mb-xs"><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/skills" onClick={() => openCloseMenu()}>{t('navigation.skills')}</NavLink></div>
+                            <div className="mb-xs"><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/experience" onClick={() => openCloseMenu()}>{t('navigation.xp')}</NavLink></div>
+                            <div><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/contact" onClick={() => openCloseMenu()}>{t('navigation.contact')}</NavLink></div>
                         </div>
                         <div>
                             <a href="cv-guillaume-majstruk.pdf" download="Majstruk-Guillaume-Resume">
@@ -89,4 +93,4 @@ const Nav = () => {
     )
 };
 
-export default Nav;
+export default withNamespaces()(Nav);

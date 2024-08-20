@@ -1,10 +1,10 @@
 import { faCode, faCog, faFileCode, faCloud } from '@fortawesome/free-solid-svg-icons';
 
-const PROFICIENT = 'Proficient';
-const FAMILIAR = 'Familiar';
+const PROFICIENT = 'proficient';
+const FAMILIAR = 'familiar';
 
 const frontend = {
-  title: 'Frontend',
+  title: 'frontend',
   icon: faFileCode,
   skills: [
     {
@@ -31,7 +31,7 @@ const frontend = {
 };
 
 const backend = {
-  title: 'Backend',
+  title: 'backend',
   icon: faCode,
   skills: [
     {
@@ -54,7 +54,7 @@ const backend = {
 };
 
 const toolsAndDatabases = {
-  title: "Outils et bases de données",
+  title: "toolsAndDatabases",
   icon: faCog,
   skills: [
     {
@@ -85,7 +85,7 @@ const toolsAndDatabases = {
 }
 
 const clouds = {
-  title: 'Clouds',
+  title: 'cloud',
   icon: faCloud,
   skills: [
     {

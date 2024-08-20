@@ -1,0 +1,65 @@
+{
+  "contact_me": "me contacter",
+  "navigation": {
+    "home": "accueil",
+    "skills": "compétences",
+    "xp": "expériences",
+    "contact": "contact"
+  },
+  "home": {
+    "page_title": "accueil",
+    "title": "Expert Web Fullstack",
+    "open_to_work": "En recherche de mission",
+    "presentation": {
+      "dev": "Développeur fullstack spécialisé",
+      "services": "Je mets à disposition mon expertise pour vous proposer des solutions performantes à vos besoins applicatifs. Que ce soit une Marketplace, un site d'E-commerce, une application web ou mobile, ma démarche sera centrée sur votre besoin 🫵",
+      "your_needs": "🚀 Je m'engage à fournir des solutions qui non seulement répondent aux exigences techniques mais aussi améliorent l'expérience utilisateur et contribuent à la réussite de vos projets.",
+      "quality": "📈 En quête de qualité et d'excellence, je suis prêt à relever de nouveaux défis et à collaborer pour transformer vos idées en réalités.",
+      "languages": "Langues"
+    }
+  },
+  "skills": {
+    "page_title": "compétences",
+    "my_skills": "Quelles sont mes <1>COMPÉTENCES ? #</1>",
+    "questions": "Une question ? N'hésitez pas à",
+    "proficient": "Expérimenté",
+    "familiar": "Familier",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "toolsAndDatabases": "Outils et bases de données",
+    "cloud": "Cloud"
+  },
+  "experience": {
+    "page_title": "xp",
+    "my_xp": "Mon <1>EXPÉRIENCE</1>",
+    "get_in_touch": "Vous avez un projet ? Entrons en contact ! ->"
+  },
+  "contact": {
+    "page_title": "contact",
+    "title": "Vous avez besoin de mes services ? Vous avez une question ? <1>Demandez-moi !</1>",
+    "subtitle": "Je répondrai dès que possible !",
+    "form": {
+      "firstName": {
+        "value": "Prénom...",
+        "error": "Le prénom est requis !"
+      },
+      "lastName": {
+        "value": "Nom...",
+        "error": "Le nom est requis !"
+      },
+      "mail": {
+        "value": "Votre email...",
+        "error": "L'email est requis !"
+      },
+      "subject": {
+        "value": "Sujet...",
+        "error": "Le sujet est requis !"
+      },
+      "content": {
+        "value": "Le contenue de votre message...",
+        "error": "Le message ne peut pas être vide !"
+      }
+    },
+    "send": "envoyer"
+  }
+}

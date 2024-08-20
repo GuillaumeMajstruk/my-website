@@ -1,20 +1,21 @@
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { withNamespaces } from 'react-i18next';
 
-const Home = () => {
+const Home = ({t}) => {
     return (
-        <div className="column container fullscreen center-h center-v">
-            <div className="background-header">home</div>
-            <div className="row center-h m-auto h-100">
+        <div className="column container-content fullscreen center-h center-v">
+            <div className="background-header">{t('home.page_title')}</div>
+            <div className="row center-h h-100">
                 <div className="column center-h">
                     <div className="profile-picture--container">
                         <img src="profile.png" alt="profile"></img>
                     </div>
                     <span style={{ display: "flex", flexFlow: "row nowrap", alignItems: "center", minHeight: "110px" }}>
-                        <h2 className="mt-sm">Expert Web Fullstack</h2>
+                        <h2 className="mt-sm">{t('home.title')}</h2>
                     </span>
-                    <h3 className="underlined font-space">EN RECHERCHE DE MISSION</h3>
+                    <h3 className="underlined font-space">{t('home.open_to_work')}</h3>
                     <div className="mt-md mb-md">
                         <div>
                             <Icon icon={faMapMarkerAlt} className="mr-xs"></Icon>
@@ -30,15 +31,15 @@ const Home = () => {
                         </div>
                     </div>
                     <div className='text-break w-50 text-start mb-md'>
-                        Développeur fullstack spécialisé  <b>Javascript</b> / <b>Typescript</b>
+                        {t('home.presentation.dev')}  <b>Javascript</b> / <b>Typescript</b>
                         <br /><br />
-                        Je mets à disposition mon expertise pour vous proposer des solutions performantes à vos besoins applicatifs. Que ce soit une Marketplace, un site d'E-commerce, une application web ou mobile, ma démarche sera centrée sur votre besoin 🫵
+                        {t('home.presentation.services')}
                         <br /><br />
-                        🚀 Je m'engage à fournir des solutions qui non seulement répondent aux exigences techniques mais aussi améliorent l'expérience utilisateur et contribuent à la réussite de vos projets.
+                        {t('home.presentation.your_needs')}
                         <br /><br />
-                        📈 En quête de qualité et d'excellence, je suis prêt à relever de nouveaux défis et à collaborer pour transformer vos idées en réalités.
+                        {t('home.presentation.quality')}
                         <br /><br />
-                        Langues: 🇫🇷 🏴󠁧󠁢󠁥󠁮󠁧󠁿 🇪🇸
+                        {t('home.presentation.languages')} 🇫🇷 🏴󠁧󠁢󠁥󠁮󠁧󠁿 🇪🇸
                     </div>
                 </div>
             </div>
@@ -46,4 +47,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default withNamespaces()(Home);
