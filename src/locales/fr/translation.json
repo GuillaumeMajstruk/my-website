@@ -21,7 +21,7 @@
   "skills": {
     "page_title": "compétences",
     "my_skills": "Quelles sont mes <1>COMPÉTENCES ? #</1>",
-    "questions": "Une question ? N'hésitez pas à",
+    "questions": "Une question ? N'hésitez pas à me contacter !",
     "proficient": "Expérimenté",
     "familiar": "Familier",
     "frontend": "Frontend",
@@ -32,7 +32,7 @@
   "experience": {
     "page_title": "xp",
     "my_xp": "Mon <1>EXPÉRIENCE</1>",
-    "get_in_touch": "Vous avez un projet ? Entrons en contact ! ->"
+    "get_in_touch": "Vous avez un projet ? Entrons en contact !"
   },
   "contact": {
     "page_title": "contact",

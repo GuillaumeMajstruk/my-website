@@ -1,10 +1,10 @@
 import {
-    BrowserRouter as Router,
     Switch,
     NavLink,
-    Route
+    Route,
+    useLocation
 } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
     Contact,
     Experience,
@@ -14,9 +14,14 @@ import {
 } from "../views";
 import { LanguageSelector } from './language-select';
 import { withNamespaces } from 'react-i18next';
+import LinkBtn from './link-btn';
 
 const Nav = ({t}) => {
     const [isMenuOpen, setMenuOpen] = useState(false);
+    const [hideContactButton, setHideContactButton] = useState(false);
+    const location = useLocation();
+
+    useEffect(() => setHideContactButton(location.pathname !== '/' && location.pathname !== '/contact'), [location]);
 
     const switchTheme = () => {
         document.documentElement.classList.toggle("dark");
@@ -31,7 +36,7 @@ const Nav = ({t}) => {
     }
 
     return (
-        <Router>
+        <>
             <div className="navbar">
                 <div className="navbar--left">
                     <NavLink exact id="logo" to="/"><img src="logo192.png" alt="logo"></img></NavLink>
@@ -41,9 +46,7 @@ const Nav = ({t}) => {
                     <NavLink exact className="navbar--link" activeClassName="navbar--link-active" to="/contact">{t('navigation.contact')}</NavLink>
                 </div>
                 <div className="navbar--right">
-                    <a href="cv-guillaume-majstruk.pdf" download="Majstruk-Guillaume-Resume">
-                        <div className="button button-outlined">download resume</div>
-                    </a>
+                    { hideContactButton && <LinkBtn destination="/contact" />}
                     <LanguageSelector />
                     <div id="theme-slider" className="slider active" onClick={() => switchTheme()}></div>
                 </div>
@@ -89,7 +92,7 @@ const Nav = ({t}) => {
                     </div>
                 </div>
             </div>
-        </Router>
+        </>
     )
 };
 

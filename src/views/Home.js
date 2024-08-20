@@ -2,6 +2,7 @@ import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { withNamespaces } from 'react-i18next';
+import { default as LinkBtn } from "../components/link-btn";
 
 const Home = ({t}) => {
     return (
@@ -40,6 +41,9 @@ const Home = ({t}) => {
                         {t('home.presentation.quality')}
                         <br /><br />
                         {t('home.presentation.languages')} 🇫🇷 🏴󠁧󠁢󠁥󠁮󠁧󠁿 🇪🇸
+                    </div>
+                    <div className="mb-lg" >
+                        <LinkBtn destination="/contact"/>
                     </div>
                 </div>
             </div>

@@ -2,7 +2,6 @@ import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faUserTie } from '@fortawesome/free-solid-svg-icons';
 import { experiences } from "../data";
 import { withNamespaces, Trans } from 'react-i18next';
-import LinkBtn from '../components/link-btn';
 
 const Experience = ({t}) => {
     return (
@@ -16,7 +15,7 @@ const Experience = ({t}) => {
                         </Trans>
                         &nbsp;<Icon icon={faUserTie}></Icon>
                     </h2>
-                    <h3 className="font-space text-normal mt-xs">{t('experience.get_in_touch')} <LinkBtn destination="/contact"/></h3>
+                    <h3 className="font-space text-normal mt-xs">{t('experience.get_in_touch')}</h3>
                     <div className="xp--container mt-md mb-sm">
                         <div className="xp--timeline"></div>
                         {experiences.map((experience, index) => {

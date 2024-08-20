@@ -2,7 +2,6 @@ import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { Fragment } from 'react';
 import { SKILLS } from '../data';
 import { Trans, withNamespaces } from 'react-i18next'
-import { default as LinkButton} from '../components/link-btn';
 
 const Skills = ({ t }) => {
     return (
@@ -16,7 +15,7 @@ const Skills = ({ t }) => {
                         </Trans>
                     </h2>
                     <h3 className="font-space text-normal mt-xs">
-                        {t('skills.questions')} <LinkButton destination="/contact" />
+                        {t('skills.questions')}
                     </h3>
                     <div id="skill-grid" className="grid-wrapper space-between mt-lg w-100" style={{ fontSize: "1.8rem" }}>
                         {
