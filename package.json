@@ -7,6 +7,7 @@
     "npm": "9.5.1"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.4.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
@@ -14,8 +15,7 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
-    "dotenv": "^8.2.0",
-    "emailjs-com": "^3.2.0",
+    "dotenv": "^8.6.0",
     "i18next": "^23.14.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

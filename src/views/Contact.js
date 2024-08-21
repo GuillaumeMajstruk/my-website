@@ -1,6 +1,6 @@
 import {FontAwesomeIcon as Icon} from '@fortawesome/react-fontawesome';
 import {faHourglassHalf} from '@fortawesome/free-solid-svg-icons';
-import emailjs from 'emailjs-com';
+import { sendForm } from '@emailjs/browser';
 import { useForm } from 'react-hook-form';
 import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
@@ -26,7 +26,7 @@ const Contact = ({t}) => {
     const sendMsg = async () => {
         try {
             setLoading(true);
-            await emailjs.sendForm(
+            await sendForm(
                 process.env.REACT_APP_MAIL_SERVICE,
                 process.env.REACT_APP_MAIL_TEMPLATE,
                 "#contact-col",
