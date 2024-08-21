@@ -32,9 +32,9 @@ const Contact = ({t}) => {
                 "#contact-col",
                 process.env.REACT_APP_MAIL_USER
             );
-            toast.success("Your message were succesfully sent.");
+            toast.success(t('contact.send_success'));
         } catch (error) {
-            toast.error("An error occured sending your message...")
+            toast.error(t('contact.send_failed'))
         }
         setLoading(false);
         return;

@@ -38,6 +38,8 @@
     "page_title": "contact",
     "title": "You need my services? You have any question? <1>Just ask me !</1>",
     "subtitle": "I will respond ASAP!",
+    "send_success": "Your message were succesfully sent.",
+    "send_failed": "An error occured sending your message...",
     "form": {
       "firstName": {
         "value": "Firstname...",
