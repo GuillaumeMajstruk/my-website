@@ -6,25 +6,28 @@ import { Copyright } from './views';
 import {
   BrowserRouter as Router,
 } from 'react-router-dom';
+import { ThemeProvider } from './contexts/themeContext';
 require('dotenv').config();
 
 function App() {
   return (
-    <Router>
-      <div className="container">
-        <ToastContainer position="top-center"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover/>
-        <Nav />
-        <Copyright />
-      </div>
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <div className="container">
+          <ToastContainer position="top-center"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover/>
+          <Nav />
+          <Copyright />
+        </div>
+      </Router>
+    </ThemeProvider>
   );
 }
 

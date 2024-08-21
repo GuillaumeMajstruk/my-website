@@ -15,18 +15,31 @@ import {
 import { LanguageSelector } from './language-select';
 import { withNamespaces } from 'react-i18next';
 import LinkBtn from './link-btn';
+import { useAppTheme } from '../hooks/useAppTheme';
 
 const Nav = ({t}) => {
     const [isMenuOpen, setMenuOpen] = useState(false);
     const [hideContactButton, setHideContactButton] = useState(false);
     const location = useLocation();
+    const { theme, setTheme } = useAppTheme();
 
     useEffect(() => setHideContactButton(location.pathname !== '/' && location.pathname !== '/contact'), [location]);
+    useEffect(() => {
+        if (theme) {
+            if (theme === 'dark') {
+                document.documentElement.classList.add("dark");
+                document.getElementById("theme-slider").classList.remove("active");
+                document.getElementById("theme-slider-mobile").classList.remove("active");
+            } else {
+                document.documentElement.classList.remove("dark");
+                document.getElementById("theme-slider").classList.add("active");
+                document.getElementById("theme-slider-mobile").classList.add("active");
+            }
+        }
+    }, [theme]);
 
-    const switchTheme = () => {
-        document.documentElement.classList.toggle("dark");
-        document.getElementById("theme-slider").classList.toggle("active");
-        document.getElementById("theme-slider-mobile").classList.toggle("active");
+    const updateTheme = () => {
+        setTheme(theme === 'light' ? 'dark' : 'light');
     }
 
     const openCloseMenu = () => {
@@ -48,7 +61,7 @@ const Nav = ({t}) => {
                 <div className="navbar--right">
                     { hideContactButton && <LinkBtn destination="/contact" />}
                     <LanguageSelector />
-                    <div id="theme-slider" className="slider active" onClick={() => switchTheme()}></div>
+                    <div id="theme-slider" className="slider active" onClick={updateTheme}></div>
                 </div>
             </div>
             <div></div>
@@ -86,7 +99,7 @@ const Nav = ({t}) => {
                     </div>
                 </div>
                 <div className="navbar-mobile--buttons-row">
-                    <div id="theme-slider-mobile" className="slider active" onClick={() => switchTheme()}></div>
+                    <div id="theme-slider-mobile" className="slider active" onClick={updateTheme}></div>
                     <div id="show-menu-container" onClick={() => openCloseMenu()}>
                         <div id="show-menu"></div>
                     </div>

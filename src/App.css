@@ -79,8 +79,16 @@
   --text-font: "Space Mono";
 }
 
+select {
+  border: unset;
+  border-radius: 2rem;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  cursor: pointer;
+}
+
 html {
-  transition: color, background-color 0.2s ease-in;
+  /* transition: color, background-color 0.2s ease-in; */
   font-size: var(--base-font-size);
   color: var(--text-color);
   background-color: var(--background-color);
@@ -287,7 +295,13 @@ textarea {
   font-size: var(--body-font-size);
   background: var(--input-color);
   color: var(--text-color);
-  transition: background 0.2s ease-in;
+  /* transition: background 0.2s ease-in; */
+}
+
+input:hover,
+textarea:hover {
+  outline: none !important;
+  background: var(--slider-background);
 }
 
 textarea {

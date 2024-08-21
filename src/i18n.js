@@ -17,7 +17,6 @@ const resources = {
 i18n
   .use(reactI18nextModule) // passes i18n down to react-i18next
   .init({
-    debug: true,
     resources,
     lng: "fr",
     interpolation: {
