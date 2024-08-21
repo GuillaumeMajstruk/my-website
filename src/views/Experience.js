@@ -1,22 +1,26 @@
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faUserTie } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
 import { experiences } from "../data";
+import { withNamespaces, Trans } from 'react-i18next';
 
-const Experience = () => {
+const Experience = ({t}) => {
     return (
         <div className="column container fullscreen center-h center-v">
             <div className="background-header">xp</div>
             <div className="center-h h-100 ml-auto mr-auto" style={{width: "100%"}}>
                 <div className="column h-100 center-v">
-                    <h2 className="font-rhyme text-light mt-sm">WHAT ABOUT MY <strong>EXPERIENCE?</strong>&nbsp;<Icon icon={faUserTie}></Icon></h2>
-                    <span className="font-normal">Here is a timeline of it</span>
-                    <h3 className="font-space text-normal mt-xs">You have a project? Talk with me! <Link className="button text-bold" to='/contact'>contact me</Link></h3>
+                    <h2 className="font-rhyme text-light mt-sm">
+                        <Trans i18nKey="experience.my_xp" >
+                            Here is a timeline of my <strong>EXPERIENCE?</strong>
+                        </Trans>
+                        &nbsp;<Icon icon={faUserTie}></Icon>
+                    </h2>
+                    <h3 className="font-space text-normal mt-xs">{t('experience.get_in_touch')}</h3>
                     <div className="xp--container mt-md mb-sm">
                         <div className="xp--timeline"></div>
                         {experiences.map((experience, index) => {
                             return (
-                                <div className={"xp--content-container " + experience.class + "-b"} key={experience.id}>
+                                <div className={"xp--content-container " + experience.class + "-b"} key={experience.title}>
                                     {
                                         index % 2 !== 0 ? <div className="xp--date-container">
                                             <span>{experience.dates.to}</span>
@@ -59,4 +63,4 @@ const Experience = () => {
     )
 };
 
-export default Experience;
+export default withNamespaces()(Experience);

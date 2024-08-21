@@ -1,73 +1,49 @@
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt, faCircle } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { useEffect, useRef } from 'react';
-import Typed from 'typed.js';
+import { withNamespaces } from 'react-i18next';
+import { default as LinkBtn } from "../components/link-btn";
 
-const Home = () => {
-    const title = useRef(null);
-    const typed = useRef(null);
-
-    useEffect(() => {
-        const options = {
-            strings: [
-                'Web Fullstack Dev',
-                'Ui / Ux',
-                'Blockchain',
-                'App Architect'
-            ],
-            typeSpeed: 70,
-            backSpeed: 90,
-            backDelay: 2000,
-            loop: true
-        };
-        
-        typed.current = new Typed(title.current, options);
-
-        return () => {
-            typed.current.destroy();
-        }
-    })
+const Home = ({t}) => {
     return (
-        <div className="column container fullscreen center-h center-v">
-            <div className="background-header">home</div>
-            <div className="row center-h m-auto h-100">
+        <div className="column container-content fullscreen center-h center-v">
+            <div className="background-header">{t('home.page_title')}</div>
+            <div className="row center-h h-100">
                 <div className="column center-h">
                     <div className="profile-picture--container">
                         <img src="profile.png" alt="profile"></img>
                     </div>
-                    <h3 className="text-normal mt-sm">MAJSTRUK GUILLAUME</h3>
-                    <h3 className="text-normal"><Icon icon={faCircle} transform="shrink-11"></Icon> 28 yo <Icon icon={faCircle} transform="shrink-11"></Icon></h3>
-                    <span style={{display: "flex", flexFlow: "row nowrap", alignItems: "center"}}>
-                        <h2 className="mt-sm" ref={title}> </h2>
+                    <span style={{ display: "flex", flexFlow: "row nowrap", alignItems: "center", minHeight: "110px" }}>
+                        <h2 className="mt-sm">{t('home.title')}</h2>
                     </span>
-                    <h3 className="underlined font-space">OPEN TO WORK</h3>
-                    <div id="home-grid" className="grid-wrapper mt-lg w-100">
+                    <h3 className="underlined font-space">{t('home.open_to_work')}</h3>
+                    <div className="mt-md mb-md">
                         <div>
-                            <div className="text-bold" style={{fontSize: "2rem"}}>42, Paris</div>                            
-                            <div>Junior</div>
-                            <br></br>
-                            <div className="text-bold" style={{fontSize: "2rem"}}>Aeronautics Mechanics Graduation</div>                            
-                            <div>Very Good</div>
-                            <br></br>
-                            <div className="text-bold" style={{fontSize: "2rem"}}>Scientific Graduation</div>                            
-                            <div>Well</div>
-                            <br></br>
+                            <Icon icon={faMapMarkerAlt} className="mr-xs"></Icon>
+                            Chantilly, Oise, France
                         </div>
-                        <div>
-                            <div>
-                                <Icon icon={faMapMarkerAlt} className="mr-xs"></Icon>
-                                Chantilly, Oise, France
-                            </div>
-                            <div className="mt-xs">
-                                <Icon icon={faGithub} className="mr-xs"></Icon>
-                                <a style={{color: "var(--link-color)"}}href="https://github.com/GuillaumeMajstruk" rel="noreferrer" target="_blank">/GuillaumeMajstruk</a>
-                            </div>
-                            <div className="mt-xs">
-                                <Icon icon={faLinkedin} className="mr-xs"></Icon>
-                                <a style={{color: "var(--link-color)"}}href="https://www.linkedin.com/in/guillaume-majstruk/" rel="noreferrer" target="_blank">/in/guillaume-majstruk</a>
-                            </div>
+                        <div className="mt-xs">
+                            <Icon icon={faGithub} className="mr-xs"></Icon>
+                            <a style={{ color: "var(--link-color)" }} href="https://github.com/GuillaumeMajstruk" rel="noreferrer" target="_blank">/GuillaumeMajstruk</a>
                         </div>
+                        <div className="mt-xs">
+                            <Icon icon={faLinkedin} className="mr-xs"></Icon>
+                            <a style={{ color: "var(--link-color)" }} href="https://www.linkedin.com/in/guillaume-majstruk/" rel="noreferrer" target="_blank">/in/guillaume-majstruk</a>
+                        </div>
+                    </div>
+                    <div className='text-break w-50 text-start mb-md'>
+                        {t('home.presentation.dev')}  <b>Javascript</b> / <b>Typescript</b>
+                        <br /><br />
+                        {t('home.presentation.services')}
+                        <br /><br />
+                        {t('home.presentation.your_needs')}
+                        <br /><br />
+                        {t('home.presentation.quality')}
+                        <br /><br />
+                        {t('home.presentation.languages')} 🇫🇷 🏴󠁧󠁢󠁥󠁮󠁧󠁿 🇪🇸
+                    </div>
+                    <div className="mb-lg" >
+                        <LinkBtn destination="/contact"/>
                     </div>
                 </div>
             </div>
@@ -75,4 +51,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default withNamespaces()(Home);
