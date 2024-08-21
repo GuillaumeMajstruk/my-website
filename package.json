@@ -2,6 +2,10 @@
   "name": "my-website",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "16.13.2",
+    "npm": "9.5.1"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
