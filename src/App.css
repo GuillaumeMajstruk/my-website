@@ -83,7 +83,7 @@ select {
   border: unset;
   border-radius: 2rem;
   color: var(--text-color);
-  background-color: var(--background-color);
+  background-color: inherit;
   cursor: pointer;
 }
 

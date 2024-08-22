@@ -91,10 +91,15 @@ const Nav = ({t}) => {
                             <div className="mb-xs"><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/experience" onClick={() => openCloseMenu()}>{t('navigation.xp')}</NavLink></div>
                             <div><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/contact" onClick={() => openCloseMenu()}>{t('navigation.contact')}</NavLink></div>
                         </div>
-                        <div>
-                            <a href="cv-guillaume-majstruk.pdf" download="Majstruk-Guillaume-Resume">
-                                <div className="button button-outlined">download resume</div>
-                            </a>
+                        <div style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            gap: "20px"
+                        }}>
+                            <LinkBtn destination="/contact" />
+                            <LanguageSelector />
                         </div>
                     </div>
                 </div>
