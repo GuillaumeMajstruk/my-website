@@ -40,7 +40,7 @@ const Home = ({t}) => {
                         <br /><br />
                         {t('home.presentation.quality')}
                         <br /><br />
-                        {t('home.presentation.languages')} 🇫🇷 🏴󠁧󠁢󠁥󠁮󠁧󠁿 🇪🇸
+                        {t('home.presentation.languages')} 🇫🇷 🇬🇧 🇪🇸
                     </div>
                     <div className="mb-lg" >
                         <LinkBtn destination="/contact"/>
