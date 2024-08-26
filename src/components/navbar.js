@@ -20,7 +20,6 @@ import { useAppTheme } from '../hooks/useAppTheme';
 const Nav = ({t}) => {
     const [isMenuOpen, setMenuOpen] = useState(false);
     const [isContactButtonShown, setContactMobileButtonShown] = useState(false);
-    const [isContactButtonShownMobile, setContactMobileButtonShownMobile] = useState(false);
     const [hideContactButton, setHideContactButton] = useState(false);
     const location = useLocation();
     const { theme, setTheme } = useAppTheme();
@@ -63,7 +62,7 @@ const Nav = ({t}) => {
                     <NavLink exact className="navbar--link" activeClassName="navbar--link-active" to="/contact">{t('navigation.contact')}</NavLink>
                 </div>
                 <div className="navbar--right">
-                    { hideContactButton && <LinkBtn destination="/contact" />}
+                    { hideContactButton && <div className="fade-in"><LinkBtn destination="/contact" /></div>}
                     <LanguageSelector />
                     <div id="theme-slider" className="slider active" onClick={updateTheme}></div>
                 </div>
@@ -90,10 +89,10 @@ const Nav = ({t}) => {
                 <div id="navbar-mobile-actions" className="navbar-mobile--actions">
                     <div id="navbar-mobile--grid" className="grid-wrapper">
                         <div>
-                            <div className="mb-xs"><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/" onClick={() => openCloseMenu()}>{t('navigation.home')}</NavLink></div>
-                            <div className="mb-xs"><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/skills" onClick={() => openCloseMenu()}>{t('navigation.skills')}</NavLink></div>
-                            <div className="mb-xs"><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/experience" onClick={() => openCloseMenu()}>{t('navigation.xp')}</NavLink></div>
-                            <div><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/contact" onClick={() => openCloseMenu()}>{t('navigation.contact')}</NavLink></div>
+                            <div className="mb-xs"><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/" onClick={openCloseMenu}>{t('navigation.home')}</NavLink></div>
+                            <div className="mb-xs"><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/skills" onClick={openCloseMenu}>{t('navigation.skills')}</NavLink></div>
+                            <div className="mb-xs"><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/experience" onClick={openCloseMenu}>{t('navigation.xp')}</NavLink></div>
+                            <div><NavLink exact className="navbar-mobile--link" activeClassName="navbar-mobile--link-active" to="/contact" onClick={openCloseMenu}>{t('navigation.contact')}</NavLink></div>
                         </div>
                         <div style={{
                             display: "flex",
@@ -102,15 +101,15 @@ const Nav = ({t}) => {
                             alignItems: "center",
                             gap: "20px"
                         }}>
-                            <LinkBtn destination="/contact" />
+                            <LinkBtn onClick={openCloseMenu} destination="/contact" />
                             <LanguageSelector />
                         </div>
                     </div>
                 </div>
                 <div className="navbar-mobile--buttons-row">
                     <div id="theme-slider-mobile" className="slider active" onClick={updateTheme}></div>
-                    <div id="show-menu-container" onClick={() => openCloseMenu()}>
-                        {(isContactButtonShown && hideContactButton) && <div className="fade-in"><LinkBtn destination="/contact" /></div> }
+                    <div id="show-menu-container" onClick={openCloseMenu}>
+                        {(isContactButtonShown && hideContactButton) && <div onClick={openCloseMenu} className="fade-in"><LinkBtn destination="/contact" /></div> }
                         <div id="show-menu"></div>
                     </div>
                 </div>
