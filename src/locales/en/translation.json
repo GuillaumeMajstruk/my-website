@@ -8,7 +8,7 @@
   },
   "home": {
     "page_title": "home",
-    "title": "Fullstack Web Expert",
+    "title": "Experienced fullstack web dev",
     "open_to_work": "Open to work",
     "presentation": {
       "dev": "Fullstack Developer specializing in",
@@ -20,8 +20,8 @@
   },
   "skills": {
     "page_title": "skills",
-    "my_skills": "What are my <1>skills? #</1>",
-    "questions": "Any questions, fill free to contact me!",
+    "my_skills": "What are my <1>Skills? #</1>",
+    "questions": "Any questions, feel free to contact me!",
     "proficient": "Proficient",
     "familiar": "Familiar",
     "frontend": "Frontend",
@@ -31,7 +31,7 @@
   },
   "experience": {
     "page_title": "xp",
-    "my_xp": "Timeline of my developer <1>EXPERIENCE</1>",
+    "my_xp": "My developer <1>Experience</1>",
     "get_in_touch": "You have a project? Let's get in touch!"
   },
   "contact": {
