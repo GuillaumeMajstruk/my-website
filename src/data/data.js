@@ -1,10 +1,10 @@
-export const experiences = [
-    {
+export const experiences = {
+    fr: [{
         title: "Thales",
         function: "Développeur fullstack - Freelance",
         dates: {
-            from: "january 2022",
-            to: "august 2024"
+            from: "janvier 2022",
+            to: "août 2024"
         },
         desc: "Simulateur SINETIC",
         tasks: [
@@ -16,10 +16,10 @@ export const experiences = [
             "Factorisation du code existant",
             "Tests unitaires avec Jest",
             "Mise à jour et amélioration du SASS existant",
-            "Mises à jour des interfaces déjà existantes pour améliorer l’expérience utilisateur",
+            "Mises à jour des interfaces déjà existantes pour améliorer l'expérience utilisateur",
             "Optimisation des performances de l'application",
             "Consommation des APIs",
-            "Exposition de divers end - points avec Node.JS(REST, WEBSOCKET)",
+            "Exposition de divers end-points avec Node.JS (REST, WEBSOCKET)",
             "Refonte totale l'interface utilisateur (UI)",
             "Manipulation de canvas 2D",
             "Génération de fichiers PDF avec la librairie PDFMake",
@@ -44,8 +44,7 @@ export const experiences = [
         title: "Motion Designer Portfolio",
         function: "Développeur fullstack - Freelance",
         dates: {
-            from: "june 2023",
-            to: "june 2023"
+            from: "juin 2023",
         },
         desc: "Développement du portfolio d'une Graphiste Directrice Artistique Motion Designer",
         tasks: [
@@ -75,8 +74,8 @@ export const experiences = [
         title: "SAM.I",
         function: "Développeur fullstack - Freelance",
         dates: {
-            from: "january 2022",
-            to: "july 2022"
+            from: "janvier 2022",
+            to: "juillet 2022"
         },
         desc: "Sam.i la plateforme de coordination parcours maintien & retour en emploi",
         tasks: [
@@ -108,8 +107,8 @@ export const experiences = [
         title: "Needl",
         function: "Développeur fullstack - Freelance",
         dates: {
-            from: "november 2021",
-            to: "december 2021"
+            from: "novembre 2021",
+            to: "décembre 2021"
         },
         desc: "Facilitez votre mobilité à l'étranger.",
         tasks: [
@@ -132,8 +131,8 @@ export const experiences = [
         title: "THE FORGE",
         function: "Développeur Fullstack / Blockchain - Freelance",
         dates: {
-            from: "july 2021",
-            to: `july 2022`
+            from: "juillet 2021",
+            to: `juillet 2022`
         },
         desc: "The Forge - A bridge from blockchain technology to venture investment",
         tasks: [
@@ -141,7 +140,7 @@ export const experiences = [
             "Développement de la plateforme",
             "Connexion avec Wallet Metamask",
             "Implémentation de recherche paginée avec infinite scroll",
-            "Développement de smart contracts sur la blockchain Ethereum"
+            "Développement de smart contracts sur la blockchain Ethereum avec Solidity"
         ],
         techs: [
             "Webdesign",
@@ -149,7 +148,8 @@ export const experiences = [
             "Solidty",
             "Ethereum bolckchain",
             "Software Engineering",
-            "EcmaScript 6"
+            "EcmaScript 6",
+            "Ganache"
         ],
         class: "xp--content-pro"
     },
@@ -157,8 +157,8 @@ export const experiences = [
         title: "Weakspot",
         function: "Développeur Fullstack - CDI",
         dates: {
-            from: "november 2019",
-            to: "march 2021"
+            from: "novembre 2019",
+            to: "mars 2021"
         },
         desc: "Contrôlez votre exposition sur le net",
         tasks: [
@@ -186,8 +186,8 @@ données Neo4J et MongoDB`,
         title: "Datascientest",
         function: "Fullstack developer",
         dates: {
-            from: "may 2019",
-            to: "november 2019"
+            from: "mai 2019",
+            to: "novembre 2019"
         },
         desc: "Entrainez-vous à la data-science",
         tasks: [
@@ -210,8 +210,8 @@ du site web`
         title: "Air France",
         function: "Électro-mécanicien Réacteurs",
         dates: {
-            from: "september 2012",
-            to: "may 2019"
+            from: "septembre 2012",
+            to: "mai 2019"
         },
         desc: "Maintenance des réacteurs Airbus et Boeing",
         techs: [],
@@ -246,5 +246,246 @@ du site web`
         },
         desc: "Mention assez-bien",
         class: "xp--content-formation"
-    }
-];
+    }],
+    en: [{
+        title: "Thales",
+        function: "Fullstack Developer - Freelance",
+        dates: {
+            from: "january 2022",
+            to: "august 2024"
+        },
+        desc: "SINETIC Simulator",
+        tasks: [
+            "HTML pages creation",
+            "Creation and implementation of Angular modules, services and components for the application",
+            "Managing application routing using Angular Router",
+            "Implementation of UI using SASS / SCSS",
+            "Implementation of clients requirements",
+            "Refactoring of existing codebase",
+            "Unit testing using Jest",
+            "Application performances optimizations",
+            "APIs consumption",
+            "Node.js end-points implementation using Http (REST) and WEBSOCKET protocols",
+            "Manipulation of 2D elements using Canvas API",
+            "Generation of PDF files using PDFMake library",
+            "Generation of PPTX files using PPTXGenJS library",
+            "Generation of JSON to deal with system state permanent save",
+        ],
+        techs: [
+            "Angular 13",
+            "Angular 17",
+            "Node.Js",
+            "TypeScript",
+            "EcmaScript 6",
+            "RxJS",
+            "GitFlow",
+            "Rest API",
+            "WebSocket",
+            "Design Patterns"
+        ],
+        class: "xp--content-pro"
+    },
+        {
+            title: "Motion Designer Portfolio",
+            function: "Fullstack Developer - Freelance",
+            dates: {
+                from: "june 2023"
+            },
+            desc: "Implementation of a Motion Designer portfolio",
+            tasks: [
+                "Design and Mockup of the platform",
+                "Creation and implementation of application' components and services using React",
+                "Managing application routing",
+                "Management of design, visual organization and responsivness using Css3",
+                "Setting up a back office with Strapi (AWS DynamoDB, EC2, Bucket, etc.)",
+            ],
+            techs: [
+                "React Js",
+                "AWS Ec2",
+                "AWS S3",
+                "AWS DynamoDB",
+                "AWS Bucket",
+                "PostgreSQL",
+                "Github",
+                "Strapi",
+                "GitFlow",
+                "TypeScript"
+            ],
+            class: "xp--content-pro"
+        },
+        {
+            title: "SAM.I",
+            function: "Fullstack Developer - Freelance",
+            dates: {
+                from: "january 2022",
+                to: "july 2022"
+            },
+            desc: "Sam.i the coordination platform for retention & return to employment pathways",
+            tasks: [
+                "Software Design & Architecture",
+                "Data Architecture",
+                "Integration of the designer's Mockup",
+                "Managing user authentication using Google Cloud Platform Authentication service",
+                "Setting up the Google Firestore database",
+                "Manage codebase using GitFlow",
+                "Continuous delivery using Github Actions",
+                "Platform deployment",
+                "Implementation of the real-time notification system",
+                "Design Patterns"
+            ],
+            techs: [
+                "React Js",
+                "GCP",
+                "Cloud Firestore",
+                "Github",
+                "Application Architecture",
+                "GitFlow",
+                "TypeScript",
+                "EcmaScript 6",
+            ],
+            class: "xp--content-pro"
+        },
+        {
+            title: "Needl",
+            function: "Fullstack Developer - Freelance",
+            dates: {
+                from: "november 2021",
+                to: "december 2021"
+            },
+            desc: "Facilitate your mobility abroad.",
+            tasks: [
+                "Platform optimizations",
+                "Redesign of the presentation of a housing offer",
+                "Implementation of the 'presentation of an offer' view",
+                "MongoDB lookup requests optimization",
+                "Setting up pagination for searches through the database"
+            ],
+            techs: [
+                "React Js",
+                "Node.js",
+                "MongoDB",
+                "TypeScript",
+                "EcmaScript 6",
+            ],
+            class: "xp--content-pro"
+        },
+        {
+            title: "THE FORGE",
+            function: "Fullstack / Blockchain Developer - Freelance",
+            dates: {
+                from: "july 2021",
+                to: `july 2022`
+            },
+            desc: "The Forge - A bridge from blockchain technology to venture investment",
+            tasks: [
+                "Platform and Mockup design",
+                "Platform implementation",
+                "Manage user authentication using Metamask wallet",
+                "Implementing paginated search with infinite scroll",
+                "Development of smart contracts on the Ethereum blockchain using Solidity"
+            ],
+            techs: [
+                "Webdesign",
+                "React Js",
+                "Solidty",
+                "Ethereum bolckchain",
+                "Software Engineering",
+                "EcmaScript 6",
+                "Ganache"
+            ],
+            class: "xp--content-pro"
+        },
+        {
+            title: "Weakspot",
+            function: "Fullstack Developer - Permanent contract",
+            dates: {
+                from: "november 2019",
+                to: "march 2021"
+            },
+            desc: "Control your exposure on the internet",
+            tasks: [
+                `Development of a visualization tool that allows the user to quickly browse
+in the form of a graph its software infrastructure and to identify the possible vectors of an attack`,
+                "Application design with AdobeXD",
+                `Implementation and installation of a replicator / synchronizer between the two databases
+Neo4J and MongoDB`,
+                `Development of a public Rest API`,
+                "Development of Services, Modules and UI Components (Angular)"
+            ],
+            techs: [
+                "Angular 10",
+                "Node.Js",
+                "MongoDB",
+                "Neo4j",
+                "Python",
+                "Webdesign",
+                "TypeScript"
+            ],
+            class: "xp--content-pro"
+        },
+        {
+            title: "Datascientest",
+            function: "Fullstack developer",
+            dates: {
+                from: "may 2019",
+                to: "november 2019"
+            },
+            desc: "Learn Data-Science",
+            tasks: [
+                "Creation of HTML pages",
+                "Integration of the designer's Mockup",
+                `Creation and development of Angular 10 front-end modules, services and components for a
+landing page`,
+                `Development of a tool to allow the team to write and edit blog articles
+from the website`
+            ],
+            techs: [
+                "Angular 7",
+                "AWS DynamoDB",
+                "AWS Lambda functions",
+                "Python"
+            ],
+            class: "xp--content-pro"
+        },
+        {
+            title: "Air France",
+            function: "Electro-mechanic Aircraft engines engineer",
+            dates: {
+                from: "september 2012",
+                to: "may 2019"
+            },
+            desc: "Maintenance of Airbus and Boeing engines",
+            techs: [],
+            class: "xp--content-pro"
+        },
+        {
+            title: "Digital architect",
+            function: "42 School",
+            dates: {
+                from: "2017",
+                to: "2019"
+            },
+            desc: "IT development and architecture",
+            class: "xp--content-formation"
+        },
+        {
+            title: "Aeronautic Mechanic Engineer",
+            function: "Afmaé",
+            dates: {
+                from: "2012",
+                to: "2014"
+            },
+            desc: "Graduated Very Good",
+            class: "xp--content-formation"
+        },
+        {
+            title: "Scientist A Grade",
+            function: "Lycée Cassini, Clermont de l'Oise",
+            dates: {
+                from: "2009",
+                to: "2012"
+            },
+            desc: "Graduated well",
+            class: "xp--content-formation"
+        }]
+};
