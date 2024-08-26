@@ -7,7 +7,7 @@ const Skills = ({ t }) => {
     return (
         <div className="column container fullscreen center-h center-v">
             <div className="background-header">{t('skills.page_title')}</div>
-            <div className="center-h h-100 ml-auto mr-auto" style={{ width: "90%" }}>
+            <div className="text-align-left-sm h-100 ml-auto mr-auto" style={{ width: "90%" }}>
                 <div className="column h-100 center-v">
                     <h2 className="font-rhyme text-light">
                         <Trans i18nKey="skills.my_skills" >
@@ -17,7 +17,7 @@ const Skills = ({ t }) => {
                     <h3 className="font-space text-normal mt-xs">
                         {t('skills.questions')}
                     </h3>
-                    <div id="skill-grid" className="grid-wrapper space-between mt-lg w-100" style={{ fontSize: "1.8rem" }}>
+                    <div id="skill-grid" className="mb-xs grid-wrapper space-between mt-lg w-100" style={{ fontSize: "1.8rem" }}>
                         {
                             Object.keys(SKILLS).map((domain) =>
                                 <div className="w-100" key={domain}>

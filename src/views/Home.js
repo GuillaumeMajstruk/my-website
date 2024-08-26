@@ -14,7 +14,7 @@ const Home = ({t}) => {
                         <img src="profile.png" alt="profile"></img>
                     </div>
                     <span style={{ display: "flex", flexFlow: "row nowrap", alignItems: "center", minHeight: "110px" }}>
-                        <h2 className="mt-sm">{t('home.title')}</h2>
+                        <h2 className="mt-xs">{t('home.title')}</h2>
                     </span>
                     <h3 className="underlined font-space">{t('home.open_to_work')}</h3>
                     <div className="mt-md mb-md">

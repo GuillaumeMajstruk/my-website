@@ -43,7 +43,7 @@ const Contact = ({t}) => {
     return (
         <div className="column container fullscreen center-h center-v">
             <div className="background-header">Contact</div>
-            <div className="center-h h-100 ml-auto mr-auto" style={{width: "90%"}}>
+            <div className="text-align-left-sm h-100 ml-auto mr-auto" style={{width: "90%"}}>
                 <form id="contact-col" className="column h-100 center-v ml-auto mr-auto gap" onSubmit={handleSubmit(sendMsg)}>
                     <h2 className="font-rhyme text-light">
                         <Trans i18nKey="contact.title">
