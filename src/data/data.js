@@ -160,7 +160,7 @@ export const experiences = [
             from: "november 2019",
             to: "march 2021"
         },
-        desc: "Control your network exposure",
+        desc: "Contrôlez votre exposition sur le net",
         tasks: [
             `Développement d'un outil de visualisation qui permet à l'utilisateur de parcourir rapidement
 sous forme de graph son infrastructure logicielle et de repérer les possibles vecteurs d'une
@@ -189,7 +189,7 @@ données Neo4J et MongoDB`,
             from: "may 2019",
             to: "november 2019"
         },
-        desc: "Entrenez-vous à la data-science",
+        desc: "Entrainez-vous à la data-science",
         tasks: [
             "Création des pages HTML",
             "Intégration de la maquette",

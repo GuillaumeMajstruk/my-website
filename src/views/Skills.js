@@ -11,7 +11,7 @@ const Skills = ({ t }) => {
                 <div className="column h-100 center-v">
                     <h2 className="font-rhyme text-light">
                         <Trans i18nKey="skills.my_skills" >
-                            WHAT ARE MY <strong>SKILLS? #</strong>
+                            WHAT ARE MY <b>SKILLS? #</b>
                         </Trans>
                     </h2>
                     <h3 className="font-space text-normal mt-xs">

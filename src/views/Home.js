@@ -31,6 +31,9 @@ const Home = ({t}) => {
                             <a style={{ color: "var(--link-color)" }} href="https://www.linkedin.com/in/guillaume-majstruk/" rel="noreferrer" target="_blank">/in/guillaume-majstruk</a>
                         </div>
                     </div>
+                    <div className="mb-md" >
+                        <LinkBtn destination="/contact" />
+                    </div>
                     <div className='text-break w-50 text-start mb-md'>
                         {t('home.presentation.dev')}  <b>Javascript</b> / <b>Typescript</b>
                         <br /><br />
@@ -41,9 +44,6 @@ const Home = ({t}) => {
                         {t('home.presentation.quality')}
                         <br /><br />
                         {t('home.presentation.languages')} 🇫🇷 🇬🇧 🇪🇸
-                    </div>
-                    <div className="mb-lg" >
-                        <LinkBtn destination="/contact"/>
                     </div>
                 </div>
             </div>

@@ -79,6 +79,18 @@
   --text-font: "Space Mono";
 }
 
+@keyframes FadeIn {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: FadeIn .3s ease-in;
+}
+
 select {
   border: unset;
   border-radius: 2rem;
@@ -329,6 +341,7 @@ a:visited {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 40px;
 }
 
 #show-menu {
@@ -338,6 +351,8 @@ a:visited {
   height: 4px;
   background-color: var(--text-color);
   border-radius: calc(4px / 2);
+  transform-origin: center;
+  transition: transform .2s ease-in;
 }
 
 #show-menu::before {
@@ -370,6 +385,7 @@ a:visited {
   transform: rotate(45deg);
 }
 #show-menu.triggered {
+  transform: translateX(10%);
   background-color: var(--background-color);
 }
 #show-menu.triggered::after {

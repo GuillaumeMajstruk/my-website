@@ -19,6 +19,8 @@ import { useAppTheme } from '../hooks/useAppTheme';
 
 const Nav = ({t}) => {
     const [isMenuOpen, setMenuOpen] = useState(false);
+    const [isContactButtonShown, setContactMobileButtonShown] = useState(false);
+    const [isContactButtonShownMobile, setContactMobileButtonShownMobile] = useState(false);
     const [hideContactButton, setHideContactButton] = useState(false);
     const location = useLocation();
     const { theme, setTheme } = useAppTheme();
@@ -37,6 +39,8 @@ const Nav = ({t}) => {
             }
         }
     }, [theme]);
+
+    useEffect(() => setContactMobileButtonShown(!isMenuOpen && location.pathname !== '/contact'), [isMenuOpen, location]);
 
     const updateTheme = () => {
         setTheme(theme === 'light' ? 'dark' : 'light');
@@ -106,6 +110,7 @@ const Nav = ({t}) => {
                 <div className="navbar-mobile--buttons-row">
                     <div id="theme-slider-mobile" className="slider active" onClick={updateTheme}></div>
                     <div id="show-menu-container" onClick={() => openCloseMenu()}>
+                        {(isContactButtonShown && hideContactButton) && <div className="fade-in"><LinkBtn destination="/contact" /></div> }
                         <div id="show-menu"></div>
                     </div>
                 </div>
