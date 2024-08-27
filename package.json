@@ -23,6 +23,7 @@
     "react-i18next": "^9.0.10",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "react-snap": "^1.23.0",
     "react-toastify": "^7.0.4",
     "typed.js": "^2.0.12",
     "web-vitals": "^1.1.2"
