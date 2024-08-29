@@ -7,9 +7,11 @@ import {
   BrowserRouter as Router,
 } from 'react-router-dom';
 import { ThemeProvider } from './contexts/themeContext';
+import { useGoogleAnalytics } from './hooks';
 require('dotenv').config();
 
 function App() {
+  useGoogleAnalytics().inProdInitialize(process.env.REACT_APP_GA_TOKEN_ID);
   return (
     <ThemeProvider>
       <Router>

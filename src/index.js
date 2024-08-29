@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {StrictMode} from 'react';
 import { hydrate, render } from 'react-dom';
 import './index.css';
 import './i18n';
@@ -9,7 +9,7 @@ const rootElement = document.getElementById('root');
 if (rootElement.hasChildNodes()) {
   hydrate(<App />, rootElement);
 } else {
-  render(<App />, rootElement);
+  render(<StrictMode><App /></StrictMode>, rootElement);
 }
 
 // If you want to start measuring performance in your app, pass a function

@@ -2,7 +2,7 @@ import {
     Switch,
     NavLink,
     Route,
-    useLocation
+    useLocation,
 } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import {
@@ -16,15 +16,24 @@ import { LanguageSelector } from './language-select';
 import { withNamespaces } from 'react-i18next';
 import LinkBtn from './link-btn';
 import { useAppTheme } from '../hooks/useAppTheme';
+import { useGoogleAnalytics } from '../hooks';
 
 const Nav = ({t}) => {
+    const location = useLocation();
+    const { theme, setTheme } = useAppTheme();
+    const { inProdSendPageVisited } = useGoogleAnalytics();
     const [isMenuOpen, setMenuOpen] = useState(false);
     const [isContactButtonShown, setContactMobileButtonShown] = useState(false);
     const [hideContactButton, setHideContactButton] = useState(false);
-    const location = useLocation();
-    const { theme, setTheme } = useAppTheme();
 
-    useEffect(() => setHideContactButton(location.pathname !== '/' && location.pathname !== '/contact'), [location]);
+    useEffect(() => {
+        setHideContactButton(location.pathname !== '/' && location.pathname !== '/contact');
+        inProdSendPageVisited(
+            location.pathname,
+            location.pathname.replace('/', '').length ? "Home": location.pathname.replace('/', '')
+        )
+    }, [location, inProdSendPageVisited]);
+
     useEffect(() => {
         if (theme) {
             if (theme === 'dark') {
